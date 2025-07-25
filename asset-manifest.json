@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "//alicia-oc.github.io/alicia-oc.github.io/static/css/main.f855e6bc.css",
+    "main.js": "//alicia-oc.github.io/alicia-oc.github.io/static/js/main.8ee1162d.js",
+    "static/js/453.b21a91d2.chunk.js": "//alicia-oc.github.io/alicia-oc.github.io/static/js/453.b21a91d2.chunk.js",
+    "static/media/logo.svg": "//alicia-oc.github.io/alicia-oc.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "//alicia-oc.github.io/alicia-oc.github.io/index.html",
+    "main.f855e6bc.css.map": "//alicia-oc.github.io/alicia-oc.github.io/static/css/main.f855e6bc.css.map",
+    "main.8ee1162d.js.map": "//alicia-oc.github.io/alicia-oc.github.io/static/js/main.8ee1162d.js.map",
+    "453.b21a91d2.chunk.js.map": "//alicia-oc.github.io/alicia-oc.github.io/static/js/453.b21a91d2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.8ee1162d.js"
+  ]
+}
