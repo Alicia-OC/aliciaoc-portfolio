@@ -1,8 +1,8 @@
 {
-  "name": "my-react-app",
+  "name": "port-folio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://https://alicia-oc.github.io/alicia-oc.github.io",
+  "homepage": "https://alicia-oc.github.io/aliciaoc-portfolio",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
