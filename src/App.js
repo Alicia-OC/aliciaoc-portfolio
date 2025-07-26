@@ -48,7 +48,7 @@ function App() {
                   transition: "transform 0.3s ease-in-out",
                   color: "white",
                 }}
-                className="btn find-me-btn"
+                className="btn blog-btn"
               >
                 Check my blog
               </button>
@@ -67,7 +67,7 @@ function App() {
           </div>
         </section>
 
-        <section id="resume" className="about section">
+        <section id="resume" className="main-page">
           <div
             className="container section-title"
             data-aos="zoom-in"
@@ -81,14 +81,14 @@ function App() {
               challenges and grow both professionally and personally.
             </p>
           </div>
-          <div className="container" data-aos="fade-up" data-aos-delay="400">
+          <div className="container section-div" data-aos="fade-up" data-aos-delay="400">
             <div className="row align-items-start">
               <TechnicalSkills />
               <Projects />
             </div>
           </div>
-          <div className="container" data-aos="fade-up" data-aos-delay="400">
-            <div className="row align-items-start">
+          <div className="container section-div" data-aos="fade-up" data-aos-delay="400">
+            <div className="row align-items-start ">
               <SSkillsEducation />
               <ExperienceCertifications />
             </div>
