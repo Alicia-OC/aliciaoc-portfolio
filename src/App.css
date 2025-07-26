@@ -1,38 +1,192 @@
-.App {
-  text-align: center;
-}
+/* Filename: styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oooh+Baby&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@400;600;700&family=Oooh+Baby&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+:root {
+  scroll-behavior: smooth;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Quicksand", sans-serif;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+  --green-color: #7ED6A3;
+  --blue-color: #6CA9E3;
+  --blue-accent-color: #4379ac;
+  --pink-color: #F78FB3;
+  --font-fancy: 'Oooh Baby', cursive;
+  --font-clean: 'Inter', sans-serif;
+  --font-handwritten: 'Caveat', cursive;
+
+}
+
+.profile-image {
+  max-width: 350px;
+  justify-content: center;
+}
+
+/* added :root to force the font so it's bold, this font doesn't have bold version*/
+:root h1 {
+  font-family: var(--font-fancy);
+  font-weight: 600;
+  text-shadow: 0.8px 0px #00000020;
+}
+
+:root h2 {
+  font-family: var(--font-fancy);
+  font-size: 35px;
+  font-weight: 600;
+
+}
+
+:root p {
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+
+section {
+  padding-bottom: 3rem;
+}
+
+.main-title {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+
+}
+
+.main-title button {
+  max-width: 150px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  /* spacing */
+  z-index: 999;
+}
+
+
+h4 {
+  font-family: var(--font-fancy);
+  padding: 1rem 0;
+  font-size: 40px;
+  font-weight: 600;
+  font-size: 30px;
+
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+
+h4::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 130%;
+  height: 5em;
+  background-image: url('./img/Brush 2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.title-paragraph {
+  font-family: var(--font-clean);
+  font-size: 15.5px !important;
+  font-weight: 600;
+}
+
+.section-title h1::after {
+  content: "";
+  width: 120px;
+  height: 3px;
+  display: inline-block;
+  background: pink;
+  margin: 10px 10px;
+
+}
+
+.main {
+  padding: 2em;
+  overflow: clip;
+
+}
+
+.find-me-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+
+.find-me-btn:hover {
   color: white;
+  border: none;
+  transform: scale(1.05);
 }
 
-.App-link {
-  color: #61dafb;
+.find-me-btn {
+  transition: transform 0.3s ease-in-out;
+  margin-top: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.repo-btn:hover {
+  font-weight: bold;
+
+}
+
+.my-links {
+  text-decoration: none;
+  color: var(--blue-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding-bottom: 0.3rem;
+  transition: color 0.4s ease;
+
+}
+
+.my-links:hover {
+  transform: scale(1.05);
+  color: var(--blue-accent-color);
+}
+
+.my-links:hover::after {
+  transform: scale(1.05);
+  transform-origin: left;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+}
+
+.p-with-link {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+ 
+}
+.p-with-link a{
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.project-body {
+  display: flex;
+}
+
+.subtitle-text {
+  font-size: 14px;
+  font-weight: 500;
 }
