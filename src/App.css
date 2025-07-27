@@ -65,10 +65,53 @@
   position: fixed;
   right: 0;
   margin: 1rem;
-  /* spacing */
   z-index: 999;
 }
 
+
+/* Small devices (phones, 0px to 599px) */
+@media (max-width: 599px) {
+  .main-title button {
+    position: static;
+    margin: 1rem auto;
+    display: block;
+  }
+  .main {
+    padding: 2rem;
+  }
+  .section-title {
+    padding-top: 1rem;
+  }
+
+  .blog.btn {
+    margin: 0;
+  }
+}
+
+/* Medium devices (tablets, 600px to 899px) */
+@media (min-width: 600px) and (max-width: 899px) {
+  .main-title button {
+    position: static;
+    margin: 1rem auto;
+    display: block;
+  }
+}
+
+/* Large devices (small laptops, 900px to 1199px) */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .section-title {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+}
+
+/* Extra large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .section-title {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+}
 
 :root h4 {
   font-family: var(--font-fancy);
@@ -112,12 +155,6 @@ h4::before {
   margin: 10px 10px;
 
 }
-
-.section-title {
-  padding-bottom: 3rem;
-  padding-top: 3rem;
-}
-
 
 .find-me-grid {
   display: grid;
