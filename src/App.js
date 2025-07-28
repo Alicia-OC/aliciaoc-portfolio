@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.css";
@@ -54,12 +54,14 @@ function App() {
                   Check my blog
                 </button>
                 <button
+                  disabled
                   onClick={handleClick}
                   style={{
-                    backgroundColor: "#6CA9E3",
+                    backgroundColor: "#F78FB3",
                     transition: "transform 0.3s ease-in-out",
                     color: "white",
                   }}
+                  id="English-locale"
                   className="btn blog-btn pyramid-btn"
                 >
                   EN
@@ -67,7 +69,7 @@ function App() {
                 <button
                   onClick={handleClick}
                   style={{
-                    backgroundColor: "#6CA9E3",
+                    backgroundColor: "#7ED6A3",
                     transition: "transform 0.3s ease-in-out",
                     color: "white",
                   }}
