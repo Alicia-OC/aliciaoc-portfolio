@@ -29,7 +29,6 @@
 .main {
   overflow: clip;
   padding: 4rem;
-
 }
 
 
@@ -37,7 +36,6 @@
 :root h1 {
   font-family: var(--font-fancy);
   font-weight: 600;
-  text-shadow: 0.8px 0px #00000020;
 }
 
 :root h2 {
@@ -54,31 +52,83 @@
   margin-bottom: 3rem;
 }
 
+button {
+  width: auto;
+  flex-shrink: 0;
+}
+
 .main-title {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  gap: 1rem;
 }
 
-.main-title button {
+.main-title h1 {
+  margin: 0;
+  font-family: var(--font-fancy);
+  font-weight: 600;
+  flex-shrink: 1;
+  min-width: 0;
+  flex-basis: 60%;
+  max-width: 100%;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-basis: 35%;
+  min-width: 0;
+}
+
+.buttons-container button {
   max-width: 150px;
-  position: fixed;
-  right: 0;
-  margin: 1rem;
-  z-index: 999;
+  width: auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin: 0;
 }
 
 
-/* Small devices (phones, 0px to 599px) */
 @media (max-width: 599px) {
+  .main-title {
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-title h1 {
+    flex-basis: auto;
+    width: 100%;
+    text-align: center;
+  }
+
   .main-title button {
     position: static;
-    margin: 1rem auto;
     display: block;
+    max-width: 200px;
+    margin: '0.5rem' auto;
+    text-align: center;
+
   }
+
+  .buttons-container {
+    flex-basis: auto;
+    justify-content: center;
+    width: 100%;
+  }
+
   .main {
     padding: 2rem;
   }
+
   .section-title {
     padding-top: 1rem;
   }
@@ -86,14 +136,54 @@
   .blog.btn {
     margin: 0;
   }
+
+  .profile-image {
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 550px) {
+  .main-title {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    justify-items: center;
+  }
+
+  .main-title h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .pyramid-btn:nth-child(2) {
+    grid-column: 1;
+  }
+
+  .pyramid-btn:nth-child(3) {
+    grid-column: 2;
+  }
+
+  .pyramid-btn:nth-child(4) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
 }
 
 /* Medium devices (tablets, 600px to 899px) */
 @media (min-width: 600px) and (max-width: 899px) {
+  .main-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
   .main-title button {
     position: static;
-    margin: 1rem auto;
-    display: block;
+    max-height: 105px;
+    width: auto;
+    flex-shrink: 0;
   }
 }
 

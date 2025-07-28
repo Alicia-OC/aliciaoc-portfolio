@@ -33,34 +33,58 @@ function App() {
   return (
     <>
       <div className="main ">
-        <section id="about" class="about section">
+        <section id="about" className="about section">
           <div
-            class="container section-title"
+            className="container section-title"
             data-aos="fade-right"
             data-aos-delay="10"
           >
             <div className="main-title">
               <h1>Alicia Olivares Canales</h1>{" "}
-              <button
-                onClick={handleClick}
-                style={{
-                  backgroundColor: "#6CA9E3",
-                  transition: "transform 0.3s ease-in-out",
-                  color: "white",
-                }}
-                className="btn blog-btn"
-              >
-                Check my blog
-              </button>
+              <div className="buttons-container">
+                <button
+                  onClick={handleClick}
+                  style={{
+                    backgroundColor: "#6CA9E3",
+                    transition: "transform 0.3s ease-in-out",
+                    color: "white",
+                  }}
+                  className="btn blog-btn pyramid-btn"
+                >
+                  Check my blog
+                </button>
+                <button
+                  onClick={handleClick}
+                  style={{
+                    backgroundColor: "#6CA9E3",
+                    transition: "transform 0.3s ease-in-out",
+                    color: "white",
+                  }}
+                  className="btn blog-btn pyramid-btn"
+                >
+                  EN
+                </button>
+                <button
+                  onClick={handleClick}
+                  style={{
+                    backgroundColor: "#6CA9E3",
+                    transition: "transform 0.3s ease-in-out",
+                    color: "white",
+                  }}
+                  className="btn blog-btn pyramid-btn"
+                >
+                  ES
+                </button>
+              </div>
+              <p>
+                Junior Full Stack self-taught looking for her opportunity to{" "}
+                <b>shine</b>!
+              </p>
             </div>
-            <p>
-              Junior Full Stack self-taught looking for her opportunity to{" "}
-              <b>shine</b>!
-            </p>
           </div>
 
-          <div class="container">
-            <div class="row align-items-center">
+          <div className="container">
+            <div className="row align-items-center">
               <ContactMe />
               <WhoAmI />
             </div>
@@ -81,13 +105,21 @@ function App() {
               challenges and grow both professionally and personally.
             </p>
           </div>
-          <div className="container section-div" data-aos="fade-up" data-aos-delay="400">
+          <div
+            className="container section-div"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className="row align-items-start">
               <TechnicalSkills />
               <Projects />
             </div>
           </div>
-          <div className="container section-div" data-aos="fade-up" data-aos-delay="400">
+          <div
+            className="container section-div"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <div className="row align-items-start ">
               <SSkillsEducation />
               <ExperienceCertifications />
