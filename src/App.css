@@ -318,3 +318,17 @@ h4::before {
   font-size: 14px;
   font-weight: 500;
 }
+
+.footer {
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 2px solid var(--pink-color);
+}
+
+.footer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0.5rem;
+}

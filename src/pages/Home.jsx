@@ -93,7 +93,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
         <section id="resume" className="main-page">
           <div
             className="container section-title"
@@ -129,6 +128,13 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <footer class="footer">
+          <div class="footer-container">
+            <p>
+              &copy; 2025 Alicia Olivares Canales. Built with ♡ and lots of coffee.
+            </p>
+          </div>
+        </footer>{" "}
       </div>
     </>
   );
