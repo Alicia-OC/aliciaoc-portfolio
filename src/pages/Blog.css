@@ -1,33 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+
+.sidebar {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 250px;
+  padding: 5px 1em;
+  border-right: 1px solid;
+
+  position: sticky;
+  top: 0;
+  align-self: start;
+  transition: 300ms ease-in-out;
+}
+
+.sidebar.close {
+
+  padding: 5px;
+  width: 60px;
+  overflow: hidden;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  list-style: none;
+}
+
+
+.sidebar .social-links a {
+  font-size: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 40px;
+}
+
+.sidebar span {
+  flex-grow: 1;
+}
+
+.sub-menu {
+
+  display: grid;
+  transition: 300ms ease-in-out;
+  grid-template-rows: 0fr;
+
+  /*hide childs that don't fit*/
+  >div {
+    overflow: hidden;
+  }
+}
+
+.sub-menu.show {
+  grid-template-rows: 1fr;
+}
+
+.dropdown-btn i {
+  transition: 200ms ease;
+}
+
+.rotate i:last-child {
+  rotate: 180deg;
+}
+
+.dropdown-btn {
+
+  border-radius: .5em;
+  padding: .45em;
+  text-decoration: none;
+  display: flex;
+  gap: 1em;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+}
+
+#toggle-btn {
+  margin-left: auto;
+  padding: 1em;
+  border: none;
+  border-radius: 5em;
+  background-color: none;
+}
+
+#toggle-btn:hover {
+  background-color: #6CA9E3;
+}
+
+
 .main-blog-container {
   display: flex;
   min-height: 100vh;
 }
 
-.sidebar {
-  width: 280px;
-  padding: 1rem;
-  position: relative;
-  z-index: 997;
-  overflow-y: auto;
-}
 
-.blog-header{
-    display: flex;
+.blog-header {
+  display: flex;
 
 }
+
 .main-blogs-section {
   flex: 1;
   padding: 2rem;
   overflow-y: auto;
-  /* optional if you want scrolling */
   background-color: #fff;
 }
 
-.main-blog-container>.sidebar,
-.main-blog-container>.main-blogs-section {
-  height: 100vh;
-  overflow-y: auto;
-}
+
 
 .blog-nav.navmenu {
   display: flex;
@@ -65,7 +157,7 @@
   width: 250px;
   background-color: #f4f4f4;
   padding: 1rem;
-  position: fixed;
+  position: relative;
   height: 100vh;
   top: 0;
   left: 0;
@@ -73,6 +165,8 @@
   overflow-y: auto;
   z-index: 997;
   height: 100%;
+  padding: 1rem;
+
 
 }
 
@@ -107,7 +201,7 @@
 
 @media (max-width: 900px) {
 
-  .sidebar {
+  .navmenu {
     display: none;
     left: -100%;
 
@@ -141,6 +235,26 @@
   color: #6CA9E3;
 }
 
-.blog-li:active {
-  transform: scale(0.9);
+.blog-li:active {}
+
+
+.header .header-toggle {
+  color: var(--contrast-color);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  transition: background-color 0.3s;
+}
+
+.header .header-toggle:hover {
+  background-color: gray
 }
