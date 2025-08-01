@@ -3,12 +3,6 @@
   padding: 0;
 }
 
-body {
-  display: grid;
-  grid-template-columns: auto 1fr;
-}
-
-
 .sidebar {
   box-sizing: border-box;
   height: 100vh;
@@ -19,22 +13,44 @@ body {
   position: sticky;
   top: 0;
   align-self: start;
-  transition: 300ms ease-in-out;
+  transition: 200ms ease-in-out;
 }
 
 .sidebar.close {
-
   padding: 5px;
   width: 60px;
   overflow: hidden;
+  transition: 300ms ease-in-out;
 }
 
+
 .sidebar ul {
+  padding: 0 1.3rem 0 1.3rem;
   list-style: none;
+
 }
+
+
+.img-small.close {
+  opacity: 0;
+  transform: translateX(-20px);
+  pointer-events: none;
+  width: 0;
+
+}
+
+.nav-head h1.close {
+  display: none;
+  transition: 300ms ease-in-out;
+}
+
+
+
 
 .sidebar li {
   list-style: none;
+  align-items: center;
+
 }
 
 
@@ -78,7 +94,7 @@ body {
 .dropdown-btn {
 
   border-radius: .5em;
-  padding: .45em;
+  padding: .5em .9em .5em .9em;
   text-decoration: none;
   display: flex;
   gap: 1em;
@@ -86,7 +102,14 @@ body {
   cursor: pointer;
   border: none;
   text-align: left;
+  margin-bottom: 5px;
 }
+
+.dropdown-btn.small {
+  text-align: center;
+}
+
+
 
 #toggle-btn {
   margin-left: auto;
@@ -97,13 +120,14 @@ body {
 }
 
 #toggle-btn:hover {
-  background-color: #6CA9E3;
+  background-color: var(--blue-color);
 }
 
 
 .main-blog-container {
   display: flex;
   min-height: 100vh;
+  
 }
 
 
@@ -120,27 +144,22 @@ body {
 }
 
 
-
-.blog-nav.navmenu {
-  display: flex;
-  align-items: center;
-}
-
-.blog-nav.navmenu h5 {
-  margin-left: 5px;
-}
-
 .p-4 {
   padding: 1.5rem;
 }
 
 .img-small {
   max-width: 150px;
+  transition: 300ms ease-in-out;
+
+
+
 }
 
 .nav-head {
-  font-size: 35px;
   text-align: center;
+  transition: 300ms ease-in-out;
+
 }
 
 .nav-head a {
@@ -152,44 +171,6 @@ body {
 .nav-head a:hover {
   color: rgb(46, 43, 43);
 }
-
-.navmenu {
-  width: 250px;
-  background-color: #f4f4f4;
-  padding: 1rem;
-  position: relative;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  overflow-y: auto;
-  z-index: 997;
-  height: 100%;
-  padding: 1rem;
-
-
-}
-
-.navmenu ul {
-  list-style: none;
-  padding: 0 0 10px 0;
-  margin: 0;
-}
-
-
-.navmenu .social-links {
-  margin: 0 0 10px 0;
-}
-
-.navmenu .social-links a {
-  font-size: 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 40px;
-}
-
 
 @media (min-width: 1200px) {
 
@@ -213,11 +194,22 @@ body {
     flex-direction: column;
   }
 
+   .sidebar {
+    position: static;  /* ← Esta línea resuelve el problema */
+    width: 100%;
+    height: auto;
+  }
+
+  .sidebar.close {
+    width: 100%;
+  }
+
   .main-blogs-section {
     padding: 1rem;
     height: auto;
     overflow-y: visible;
   }
+
 }
 
 .blog-li:focus {
@@ -235,26 +227,25 @@ body {
   color: #6CA9E3;
 }
 
-.blog-li:active {}
+.navbar-group-year {
+  padding: .7em;
+  text-align: center;
 
-
-.header .header-toggle {
-  color: var(--contrast-color);
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 9999;
-  transition: background-color 0.3s;
 }
 
-.header .header-toggle:hover {
-  background-color: gray
+.navbar-group-year-small {
+  text-align: center;
+}
+
+
+.blogs-listed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogs-listed button {
+  display: flex;
+  width: 100%;
+
 }
