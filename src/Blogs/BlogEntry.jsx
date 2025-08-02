@@ -331,7 +331,7 @@ const BlogEntry = [
           {
             date: "August 1st",
             moodBefore: happy,
-            moodAfter: exhausted[1],
+            moodAfter: exhausted,
             body: (
               <div className="blog-container">
                 <h5 className="blog-scope">
@@ -429,7 +429,7 @@ const BlogEntry = [
           {
             date: "August 2nd",
             moodBefore: happy,
-            moodAfter: exhausted[1],
+            moodAfter: exhausted,
             body: (
               <div className="blog-container">
                 <h5 className="blog-scope">
@@ -451,7 +451,7 @@ const BlogEntry = [
                 </div>
 
                 <p className="note">
-                  Yes, still working on the navbar {sad} but today is the day, i
+                  Yes, still working on the navbar {sad} but today is the day, I
                   can smell it!!!!
                 </p>
 
@@ -516,6 +516,13 @@ const BlogEntry = [
                     </ul>
                   </div>
                 </div>
+                <p className="note">
+                  It's 6Pm and the only break i had was 40min while having diner
+                  and because I'm currently doing a magnetotherapy treatment for
+                  my lovely foot that's been broken for the whole summer, so...
+                  Alicia is out, see ya, bye bye, no more code for the weekend,
+                  sayonara, it's gaming time!
+                </p>
               </div>
             ),
           },
