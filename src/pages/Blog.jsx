@@ -8,13 +8,16 @@ import useMobileToggle from "../components/useMobileToggle";
 import BlogContent from "../Blogs/BlogsContainer";
 
 const Blog = () => {
-  const [blog, setBlog] = useState(BlogEntry[0].months[0].items[0]);
+  const latestBlog = BlogEntry[0].months.slice(-1)[0].items.slice(-1)[0];
+  const latestMonth = BlogEntry[0].months.slice(-1)[0].month;
+  const itemsSize = BlogEntry[0].months.slice(-1)[0].items.length
+
+  const [blog, setBlog] = useState(latestBlog);
   const [isSidebarClosed, setIsSidebarClosed] = useState(false);
   const [isOpen, setIsOpen] = useState(null);
-  const [hashtag, setHashtag] = useState(BlogEntry.length - 1);
-  const [hashtagMonth, setHashtagMonth] = useState(
-    BlogEntry[0].months[0].month
-  );
+
+  const [hashtag, setHashtag] = useState(itemsSize - 1);
+  const [hashtagMonth, setHashtagMonth] = useState(latestMonth);
 
   const toggleSubMenu = (button) => {
     setIsOpen((prev) => (prev === button ? null : button));
