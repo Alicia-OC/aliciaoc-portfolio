@@ -5,11 +5,16 @@ import { useState } from "react";
 
 import Avatar from "../img/Avatar.png";
 import useMobileToggle from "../components/useMobileToggle";
+import BlogContent from "../Blogs/BlogsContainer";
 
 const Blog = () => {
   const [blog, setBlog] = useState(BlogEntry[0].months[0].items[0]);
   const [isSidebarClosed, setIsSidebarClosed] = useState(false);
   const [isOpen, setIsOpen] = useState(null);
+  const [hashtag, setHashtag] = useState(BlogEntry.length - 1);
+  const [hashtagMonth, setHashtagMonth] = useState(
+    BlogEntry[0].months[0].month
+  );
 
   const toggleSubMenu = (button) => {
     setIsOpen((prev) => (prev === button ? null : button));
@@ -21,7 +26,7 @@ const Blog = () => {
 
   const handleManualToggle = useMobileToggle(toggleSidebar, isSidebarClosed);
 
-  const getOpenNavItems  = () => {
+  const getOpenNavItems = () => {
     return BlogEntry.map((yearGroup) => (
       <div className="open-navbar" key={yearGroup.year}>
         <h4 className="navbar-group-year">{yearGroup.year}</h4>
@@ -47,10 +52,14 @@ const Blog = () => {
                         className="blog-li"
                         role="button"
                         tabIndex={0}
-                        onClick={() => setBlog(item)}
+                        onClick={() => {
+                          setBlog(item);
+                          setHashtag(index);
+                          setHashtagMonth(monthGroup.month);
+                        }}
                         onKeyDown={(e) => e.key === "Enter" && setBlog(item)}
                       >
-                        #{index} {item.date}
+                        #{index + 1} {item.date}
                       </span>
                     </li>
                   ))}
@@ -63,7 +72,7 @@ const Blog = () => {
     ));
   };
 
-  const getClosedNavItems  = () => {
+  const getClosedNavItems = () => {
     return BlogEntry.map((yearGroup) => (
       <div key={yearGroup.year} className="navbar-small">
         <p className="navbar-group-year-small">
@@ -88,10 +97,14 @@ const Blog = () => {
                         className="blog-li"
                         role="button"
                         tabIndex={0}
-                        onClick={() => setBlog(item)}
+                        onClick={() => {
+                          setBlog(item);
+                          setHashtag(index);
+                          setHashtagMonth(monthGroup.month);
+                        }}
                         onKeyDown={(e) => e.key === "Enter" && setBlog(item)}
                       >
-                        #{index}
+                        #{index + 1}
                       </span>
                     </li>
                   ))}
@@ -106,8 +119,7 @@ const Blog = () => {
 
   return (
     <div className="main-blog-container">
-      <div>
-  
+      <div className="side-menu">
         <nav
           id="sidebar"
           className={`sidebar ${isSidebarClosed ? "close" : ""}`}
@@ -178,7 +190,11 @@ const Blog = () => {
               </div>
             </div>
             <div className="blogs-listed">
-              {isSidebarClosed ? getClosedNavItems () : <ul>{getOpenNavItems ()}</ul>}
+              {isSidebarClosed ? (
+                getClosedNavItems()
+              ) : (
+                <ul>{getOpenNavItems()}</ul>
+              )}
             </div>
           </div>
         </nav>
@@ -189,15 +205,11 @@ const Blog = () => {
         role="main"
         aria-labelledby="blog-section"
       >
-        <h1 id="blog-title">Blog # {BlogEntry.length + 1}</h1>
-        <div className="blog-header" role="contentinfo">
-          <p className="blog-subtitle">
-            Date: {blog.date}, Mood before: {blog.moodBefore} Mood after:{" "}
-            {blog.moodAfter}
-          </p>
-        </div>
-        <h3 className="blog-title">{blog.title}</h3>
-        <p className="blog-body">{blog.body}</p>
+        <BlogContent
+          hashtagMonth={hashtagMonth}
+          hashtag={hashtag}
+          blog={blog}
+        />
       </section>
     </div>
   );
