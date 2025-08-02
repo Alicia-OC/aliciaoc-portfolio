@@ -14,10 +14,11 @@
   top: 0;
   align-self: start;
   transition: 200ms ease-in-out;
+  padding-top: 2rem;
 }
 
 .sidebar.close {
-  padding: 5px;
+  padding: 40px 5px 0 5px;
   width: 60px;
   overflow: hidden;
   transition: 300ms ease-in-out;
@@ -103,31 +104,93 @@
   border: none;
   text-align: left;
   margin-bottom: 5px;
+  font-weight: 500;
+
 }
 
 .dropdown-btn.small {
   text-align: center;
+  padding: .5em .5em .5em .5em;
 }
 
 
 
-#toggle-btn {
-  margin-left: auto;
-  padding: 1em;
+.toggle-btn {
+  background: var(--blue-color);
   border: none;
-  border-radius: 5em;
-  background-color: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  /* Fixed positioning to stay at the boundary */
+  left: calc(var(--sidebar-width, 230px));
+  /* Adjust --sidebar-width to match your sidebar width */
+  top: 20px;
+  overflow: hidden;
+  z-index: 1000;
 }
 
-#toggle-btn:hover {
-  background-color: var(--blue-color);
+.toggle-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
+
+.toggle-btn:hover {
+  transform: translateY(-2px);
+}
+
+.toggle-btn:hover::before {
+  opacity: 1;
+}
+
+.toggle-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
+.toggle-btn:focus {
+  outline: none;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3), 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.toggle-btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-btn i {
+  color: white;
+  font-size: 16px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* When sidebar is closed, adjust button position */
+.sidebar.close~* .toggle-btn,
+.main-blog-container:has(.sidebar.close) .toggle-btn {
+  left: calc(var(--sidebar-closed-width, 60px) - 20px);
+  /* Adjust --sidebar-closed-width to match your collapsed sidebar width */
+}
+
 
 
 .main-blog-container {
   display: flex;
   min-height: 100vh;
-  
+
 }
 
 
@@ -138,7 +201,7 @@
 
 .main-blogs-section {
   flex: 1;
-  padding: 2rem;
+  padding: 4rem;
   overflow-y: auto;
   background-color: #fff;
 }
@@ -182,30 +245,24 @@
 
 @media (max-width: 900px) {
 
-  .navmenu {
-    display: none;
-    left: -100%;
+  .main-blogs-section {
+    padding: 5rem;
+  }
 
+  .sidebar {
+    width: 200px;
+
+  }
+
+  .toggle-btn {
+    left: calc(var(--sidebar-width, 230px));
   }
 }
 
 @media (max-width: 768px) {
-  .main-blog-container {
-    flex-direction: column;
-  }
-
-   .sidebar {
-    position: static;  /* ← Esta línea resuelve el problema */
-    width: 100%;
-    height: auto;
-  }
-
-  .sidebar.close {
-    width: 100%;
-  }
 
   .main-blogs-section {
-    padding: 1rem;
+    padding: 4rem 3rem;
     height: auto;
     overflow-y: visible;
   }
@@ -213,28 +270,46 @@
 }
 
 .blog-li:focus {
-  color: #6CA9E3;
+  color: var(--blue-color);
+  font-weight: 600;
+
 }
 
 .blog-li {
   display: inline-block;
   cursor: pointer;
-  font-weight: 600;
   border-radius: 0.25rem;
 }
 
 .blog-li:hover {
-  color: #6CA9E3;
+  color: var(--blue-color);
+}
+
+.open-navbar {
+  align-items: center;
 }
 
 .navbar-group-year {
-  padding: .7em;
+  font-family: var(--font-fancy);
+  padding: .5rem 0.7rem .5rem 1rem;
+  margin-top: .7rem;
+  font-weight: 600;
+  position: relative;
+  display: block;
   text-align: center;
+  margin-left: 15px;
+  margin-right: auto;
+  width: fit-content;
 
 }
 
 .navbar-group-year-small {
   text-align: center;
+  font-family: var(--font-fancy);
+  font-weight: 900;
+  color: var(--pink-color);
+  margin-top: 5px;
+
 }
 
 
