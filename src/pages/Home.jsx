@@ -128,8 +128,8 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <footer class="footer">
-          <div class="footer-container">
+        <footer className="footer">
+          <div className="footer-container">
             <p>
               &copy; 2025 Alicia Olivares Canales. Built with ♡ and lots of coffee.
             </p>

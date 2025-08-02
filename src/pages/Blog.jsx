@@ -4,6 +4,7 @@ import BlogEntry from "../Blogs/BlogEntry";
 import { useState } from "react";
 
 import Avatar from "../img/Avatar.png";
+import useMobileToggle from "../components/useMobileToggle";
 
 const Blog = () => {
   const [blog, setBlog] = useState(BlogEntry[0].months[0].items[0]);
@@ -18,7 +19,9 @@ const Blog = () => {
     setIsSidebarClosed((prev) => !prev);
   };
 
-  const isOpenMap = () => {
+  const handleManualToggle = useMobileToggle(toggleSidebar, isSidebarClosed);
+
+  const getOpenNavItems  = () => {
     return BlogEntry.map((yearGroup) => (
       <div className="open-navbar" key={yearGroup.year}>
         <h4 className="navbar-group-year">{yearGroup.year}</h4>
@@ -60,7 +63,7 @@ const Blog = () => {
     ));
   };
 
-  const isClosedMap = () => {
+  const getClosedNavItems  = () => {
     return BlogEntry.map((yearGroup) => (
       <div key={yearGroup.year} className="navbar-small">
         <p className="navbar-group-year-small">
@@ -104,11 +107,18 @@ const Blog = () => {
   return (
     <div className="main-blog-container">
       <div>
-        <span>
+  
+        <nav
+          id="sidebar"
+          className={`sidebar ${isSidebarClosed ? "close" : ""}`}
+          role="navigation"
+          aria-label="Blog side navbar"
+          aria-hidden={isSidebarClosed}
+        >
           <button
             id="toggle-btn"
             className={`toggle-btn ${isSidebarClosed ? "rotate" : ""}`}
-            onClick={(e) => toggleSidebar(e.currentTarget)}
+            onClick={handleManualToggle}
             aria-label={isSidebarClosed ? "Open navbar" : "Close navbar"}
             aria-expanded={!isSidebarClosed}
             aria-controls="sidebar"
@@ -117,15 +127,6 @@ const Blog = () => {
               <i className="bi bi-caret-left-fill"></i>
             </span>
           </button>
-        </span>
-
-        <nav
-          id="sidebar"
-          className={`sidebar ${isSidebarClosed ? "close" : ""}`}
-          role="navigation"
-          aria-label="Blog side navbar"
-          aria-hidden={isSidebarClosed}
-        >
           <div className="sidebar-content">
             {" "}
             <div className="nav-head">
@@ -177,7 +178,7 @@ const Blog = () => {
               </div>
             </div>
             <div className="blogs-listed">
-              {isSidebarClosed ? isClosedMap() : <ul>{isOpenMap()}</ul>}
+              {isSidebarClosed ? getClosedNavItems () : <ul>{getOpenNavItems ()}</ul>}
             </div>
           </div>
         </nav>

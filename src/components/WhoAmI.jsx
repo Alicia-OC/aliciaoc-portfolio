@@ -1,8 +1,8 @@
 const WhoAmI = () => {
   return (
-    <div class="col-lg-7" data-aos="fade-left" data-aos-delay="400">
-      <div class="about-content">
-        <div class="intro">
+    <div className="col-lg-7" data-aos="fade-left" data-aos-delay="400">
+      <div className="about-content">
+        <div className="intro">
           <h2>Who am I?</h2>
           <p>
             Ever since I was a kid, I struggled with the idea of doing{" "}
@@ -27,8 +27,8 @@ const WhoAmI = () => {
           </p>
         </div>
 
-        <div class="find-me-grid">
-          <div class="find-me-item" data-aos="zoom-in" data-aos-delay="450">
+        <div className="find-me-grid">
+          <div className="find-me-item" data-aos="zoom-in" data-aos-delay="450">
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -43,7 +43,7 @@ const WhoAmI = () => {
               Check my projects
             </a>
           </div>
-          <div class="find-me-item" data-aos="zoom-in" data-aos-delay="450">
+          <div className="find-me-item" data-aos="zoom-in" data-aos-delay="450">
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -58,7 +58,7 @@ const WhoAmI = () => {
               Check my LinkedIn
             </a>
           </div>
-          <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
+          <div className="skill-item" data-aos="zoom-in" data-aos-delay="450">
             {" "}
             <a
               target="_blank"

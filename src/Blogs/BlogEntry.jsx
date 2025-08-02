@@ -1,6 +1,6 @@
-const happy = <i class="bi bi-emoji-laughing"></i>;
-const exhausted = <i class="bi bi-emoji-dizzy"></i>;
-const whatAMess = <i class="bi bi-emoji-smile-upside-down"></i>;
+const happy = <i className="bi bi-emoji-laughing"></i>;
+const exhausted = <i className="bi bi-emoji-dizzy"></i>;
+const whatAMess = <i className="bi bi-emoji-smile-upside-down"></i>;
 
 const moodBefore = { 1: happy, 2: exhausted, 3: whatAMess };
 const moodAfter = { 1: happy, 2: exhausted, 3: whatAMess };

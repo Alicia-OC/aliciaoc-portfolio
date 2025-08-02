@@ -3,7 +3,7 @@ const ExperienceCertifications = () => {
     <div className="col-lg-7" data-aos="fade-left" data-aos-delay="300">
       <div id="education">
         <h4>
-         <i class="bi bi-briefcase"></i> Experience
+         <i className="bi bi-briefcase"></i> Experience
         </h4>
         <p className="title-paragraph">
           Localization Project Manager and part-time Software tester,
@@ -23,7 +23,7 @@ const ExperienceCertifications = () => {
       <div id="certificates">
         {" "}
         <h4>
-          <i class="bi bi-file-check"></i> Certifications
+          <i className="bi bi-file-check"></i> Certifications
         </h4>
         <p className="title-paragraph">Coming soon: AWS practicioner</p>
         <p className="title-paragraph">The Complete Full-Stack Web Development Bootcamp</p>

@@ -4,7 +4,7 @@ const Projects = () => {
       <div className="projects-content">
         <div className="intro">
           <h4>
-            <i class="bi bi-bookmark"></i> Projects
+            <i className="bi bi-bookmark"></i> Projects
           </h4>
           <div className="project-div">
             <div className="project-title">
@@ -63,7 +63,7 @@ const Projects = () => {
               </a>
             </div>
 
-            <p class="project-description">
+            <p className="project-description">
               (Built with messy code — coding quality has significantly improved
               in my new projects!) MERN stack app designed to automate the
               kick-off phase for translation workflows. Users can generate
@@ -92,7 +92,7 @@ const Projects = () => {
               </a>
             </div>
 
-            <p class="project-description">
+            <p className="project-description">
               Created a lightweight tool (single HTML file) to calculate the
               optimal translation rate to request from clients. It analyzes
               vendor rates to determine the most frequent value and applies a

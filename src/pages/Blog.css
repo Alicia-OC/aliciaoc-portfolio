@@ -245,17 +245,13 @@
 
 @media (max-width: 900px) {
 
-  .main-blogs-section {
-    padding: 5rem;
-  }
-
   .sidebar {
-    width: 200px;
+    width: 180px;
 
   }
 
   .toggle-btn {
-    left: calc(var(--sidebar-width, 230px));
+    left: calc(var(--sidebar-width, 160px));
   }
 }
 

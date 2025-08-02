@@ -3,7 +3,7 @@ const SSkillsEducation = () => {
     <div className="col-lg-5" data-aos="fade-right" data-aos-delay="200">
       <div id="soft-skills">
         {" "}
-        <h4><i class="bi bi-person"></i> Soft Skills</h4>
+        <h4><i className="bi bi-person"></i> Soft Skills</h4>
         <p className="title-paragraph">Self-Motivation and Initiative </p>
         <p>
           I have been self-studying for a few years while keeping my full-time
@@ -17,7 +17,7 @@ const SSkillsEducation = () => {
         </p>
       </div>{" "}
       <div id="education">
-        <h4><i class="bi bi-file-earmark-text"></i> Education</h4>
+        <h4><i className="bi bi-file-earmark-text"></i> Education</h4>
         <p className="title-paragraph">
           Master's in Software and Video Games Localization, 2020 - 2021 |
           Madrid

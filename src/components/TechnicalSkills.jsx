@@ -2,7 +2,7 @@ const TechnicalSkills = () => {
   return (
     <div className="col-lg-5" data-aos="fade-right" data-aos-delay="200">
       <h4>
-        <i class="bi bi-code-slash"></i> Technical Skills
+        <i className="bi bi-code-slash"></i> Technical Skills
       </h4>
       <p className="title-paragraph">MongoDB, Express, React, Node JS, Redux Toolkit </p>
       <p>Built MERN stack applications</p>
