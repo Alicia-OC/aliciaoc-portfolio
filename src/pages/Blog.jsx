@@ -2,6 +2,7 @@ import "./Blog.css";
 
 import BlogEntry from "../Blogs/BlogEntry";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Avatar from "../img/Avatar.png";
 import useMobileToggle from "../components/useMobileToggle";
@@ -10,7 +11,8 @@ import BlogContent from "../Blogs/BlogsContainer";
 const Blog = () => {
   const latestBlog = BlogEntry[0].months.slice(-1)[0].items.slice(-1)[0];
   const latestMonth = BlogEntry[0].months.slice(-1)[0].month;
-  const itemsSize = BlogEntry[0].months.slice(-1)[0].items.length
+  const itemsSize = BlogEntry[0].months.slice(-1)[0].items.length;
+  const navigate = useNavigate();
 
   const [blog, setBlog] = useState(latestBlog);
   const [isSidebarClosed, setIsSidebarClosed] = useState(false);
@@ -145,7 +147,10 @@ const Blog = () => {
           <div className="sidebar-content">
             {" "}
             <div className="nav-head">
-              <a href="/" className="got-to-homepage">
+              <a
+                href="https://alicia-oc.github.io/aliciaoc-portfolio/"
+                className="got-to-homepage"
+              >
                 <img
                   src={Avatar}
                   alt="pic profile"
