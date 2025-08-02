@@ -18,6 +18,7 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 href="https://github.com/Alicia-OC/MonthlyExpenses"
                 className="my-links"
+
               >
                 Check the repo in Github
               </a>

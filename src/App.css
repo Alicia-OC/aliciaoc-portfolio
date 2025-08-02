@@ -8,6 +8,7 @@
   --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Quicksand", sans-serif;
   justify-content: center;
+
 }
 
 :root {
@@ -20,6 +21,7 @@
   --font-handwritten: 'Caveat', cursive;
 
 }
+
 
 .profile-image {
   max-width: 350px;
@@ -52,10 +54,7 @@
   margin-bottom: 3rem;
 }
 
-button {
-  width: auto;
-  flex-shrink: 0;
-}
+
 
 .main-title {
   display: flex;
@@ -84,6 +83,8 @@ button {
   justify-content: flex-end;
   flex-basis: 35%;
   min-width: 0;
+  transition: "transform 0.3s ease-in-out",
+
 }
 
 .buttons-container button {
@@ -253,6 +254,17 @@ h4::before {
   margin-bottom: 40px;
 }
 
+.buttons-container button {
+  padding: 1rem;
+    border: none;
+
+}
+
+.buttons-container button:hover {
+  color: white;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
 
 .find-me-btn:hover {
   color: white;
@@ -261,10 +273,8 @@ h4::before {
 }
 
 .find-me-btn {
-  transition: transform 0.3s ease-in-out;
   margin-top: 1rem;
 }
-
 
 .my-links {
   text-decoration: none;
