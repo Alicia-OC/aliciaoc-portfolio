@@ -12,7 +12,6 @@ const Blog = () => {
   const latestBlog = BlogEntry[0].months.slice(-1)[0].items.slice(-1)[0];
   const latestMonth = BlogEntry[0].months.slice(-1)[0].month;
   const itemsSize = BlogEntry[0].months.slice(-1)[0].items.length;
-  const navigate = useNavigate();
 
   const [blog, setBlog] = useState(latestBlog);
   const [isSidebarClosed, setIsSidebarClosed] = useState(false);
@@ -72,7 +71,7 @@ const Blog = () => {
               )}
             </li>
           </div>
-        ))}
+        )).reverse()}
       </div>
     ));
   };
@@ -117,9 +116,9 @@ const Blog = () => {
               )}
             </li>
           </div>
-        ))}
+        )).reverse()}
       </div>
-    ));
+    ))
   };
 
   return (

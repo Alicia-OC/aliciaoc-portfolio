@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oooh+Baby&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@400;600;700&family=Oooh+Baby&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 
 
 :root {
@@ -19,7 +20,7 @@
   --font-fancy: 'Oooh Baby', cursive;
   --font-clean: 'Inter', sans-serif;
   --font-handwritten: 'Caveat', cursive;
-
+  --font-favicon: "Kalam", cursive;
 }
 
 
@@ -256,7 +257,7 @@ h4::before {
 
 .buttons-container button {
   padding: 1rem;
-    border: none;
+  border: none;
 
 }
 

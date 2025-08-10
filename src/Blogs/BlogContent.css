@@ -116,12 +116,12 @@ body {
 
 .learning-list {
     list-style: none;
-    padding-left: 0;
+    padding-left: 10pxpx;
 }
 
 .learning-list li {
-    margin-bottom: 12px;
-    padding: 10px;
+    margin-bottom: 7px;
+    padding: 7px;
     border-radius: 5px;
     border-left: 3px solid var(--blue-color);
 }
@@ -132,6 +132,7 @@ body {
     border-radius: 3px;
     font-family: 'Courier New', monospace;
     font-weight: 600;
+margin-left: 5px;
 }
 
 .note {

@@ -526,6 +526,1093 @@ const BlogEntry = [
               </div>
             ),
           },
+          {
+            date: "August 5th",
+            moodBefore: moodBefore[1],
+            moodAfter: moodAfter[1],
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Monthly Expenses Tracker
+                </h5>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Today's playlist/hit:</div>
+                  <a
+                    href="https://music.youtube.com/watch?v=T_xuTlGjVNE&list=LM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/watch?v=T_xuTlGjVNE&list=LM
+                  </a>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1722873359/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      {" "}
+                      <strong>Remove Duplicates from Sorted List</strong>
+                    </a>{" "}
+                    Getting back into the algorithm groove!
+                  </p>
+                </div>
+
+                <div className="discovery-section">
+                  <h3 className="learning-title">Today's Big Discovery:</h3>
+                  <p className="note">
+                    Started the coding session going into the wild jungle that
+                    is Mongoose relationships. Turns out… object references in
+                    Mongoose weren't working as I expected. Enter my new best
+                    friend:
+                    <span className="component-highlight">.populate()</span> —
+                    an elegant way to avoid messy loops and endless .findById()
+                    calls. Seriously, feels like discovering a cheat code.
+                  </p>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">1. Backend Security Patch</h2>
+
+                  <div className="struggle-level">Struggle: 3/10</div>
+                  <p className="note">
+                    The backend was casually sending passwords to the frontend.
+                    Not great.
+                  </p>
+
+                  <div className="learning-section">
+                    <h3 className="learning-title">Solution implemented:</h3>
+                    <div className="code-block">
+                      <pre>
+                        {`const userWithoutPassword = user.toJSON();
+delete userWithoutPassword.password;
+res.status(200).json({ user: userWithoutPassword, token });`}
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    2. Display Recent Cards - Widget
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 4/10</div>
+                  <p className="note">
+                    Widget found in the user profile for quick access to recent
+                    work.
+                  </p>
+
+                  <div className="learning-section">
+                    <h3 className="learning-title">What I implemented:</h3>
+                    <ul className="learning-list">
+                      <li>Created a new reducer to fetch the last 4 cards</li>
+                      <li>Implemented the backend route</li>
+                      <li>
+                        Updated the Recent Cards component in the profile to
+                        call the backend directly
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">3. Cards Library Component</h2>
+
+                  <div className="struggle-level">Struggle: 6/10</div>
+
+                  <div className="learning-section">
+                    <h3 className="learning-title">Features completed:</h3>
+                    <ul className="learning-list">
+                      <li>
+                        Calls the backend, fetches data, and renders beautifully
+                      </li>
+                      <li>Basic pagination structure in place</li>
+                    </ul>
+                  </div>
+
+                  <div className="bug-section">
+                    <h3 className="learning-title">Bug discovered:</h3>
+                    <p className="note">
+                      The controller only returns the last 4 cards, but the
+                      library is meant to fetch
+                      <em>all</em> cards (with pagination).
+                    </p>
+                    <p className="note">
+                      <strong>GitHub issue opened:</strong> "Component only
+                      fetches 4 cards despite having pagination for unlimited
+                      cards."
+                    </p>
+                    <p className="note">
+                      <strong>Plan:</strong> Rework so it fetches <em>all</em>{" "}
+                      cards but limits the data fetched for each one.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">4. Redux Cleanup</h2>
+
+                  <div className="struggle-level">Struggle: 1/10</div>
+                  <p className="note">
+                    Redux now sets userID <em>after</em> fetching the user
+                    object, instead of handling it separately. Little detail,
+                    big sanity win.
+                  </p>
+                </div>
+
+                <div className="diary-section">
+                  <h3 className="learning-title">Daily Reflection:</h3>
+                  <p className="note">
+                    Today felt like a balancing act between bug fixes, new
+                    features, and detective work in Mongoose. Progress was made,
+                    coffee was consumed, and a few "aha!" moments made it all
+                    worth it. {happy}
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 6th", // Assuming this is the next day
+            moodBefore: moodBefore[1],
+            moodAfter: moodAfter[1],
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Monthly Expenses Tracker
+                </h5>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Today's playlist/hits:</div>
+                  <div className="playlist-links">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://music.youtube.com/watch?v=GyuboJJluE4&list=LM"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="playlist-link"
+                        >
+                          https://music.youtube.com/watch?v=GyuboJJluE4&list=LM
+                        </a>
+                      </li>
+                      <li>
+                        {" "}
+                        <a
+                          href="https://music.youtube.com/watch?v=22WhZdYNAPc&list=LM"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="playlist-link"
+                        >
+                          https://music.youtube.com/watch?v=22WhZdYNAPc&list=LM
+                        </a>
+                      </li>
+                      <li>
+                        {" "}
+                        <a
+                          href="https://music.youtube.com/watch?v=34O4TxvuEKE&list=LM"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="playlist-link"
+                        >
+                          https://music.youtube.com/watch?v=34O4TxvuEKE&list=LM
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1724763671/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      {" "}
+                      <strong>Binary Tree Inorder Traversal</strong>
+                    </a>{" "}
+                  </p>
+                </div>
+
+                <div className="diary-section">
+                  <h3 className="learning-title">Today's Reality Check:</h3>
+                  <p className="note">
+                    The deeper I go into API integration, the more I realize
+                    just how much work hides behind preparing a full MERN stack
+                    app. I thought connecting the frontend to the backend would
+                    be a quick win—a neat, straightforward conexion. But reality
+                    check: the frontend needs to fetch data from more places
+                    than I expected, and that meant discovering a whole set of
+                    missing routes, reducers, and controllers.
+                  </p>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    1. Two New Reusable Components
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 3/10</div>
+                  <p className="note">
+                    <span className="component-highlight">
+                      ItemsExpenseList
+                    </span>
+                    and{" "}
+                    <span className="component-highlight">CategorySection</span>{" "}
+                    — created in frontend to eliminate repetitive code and keep
+                    things DRY.
+                  </p>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">2. Month Cards Rendering</h2>
+
+                  <div className="struggle-level">Struggle: 6/10</div>
+                  <p className="note">
+                    Frontend now renders any month card the user has created,
+                    fetching data directly from the API.
+                  </p>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">3. Code Cleaning</h2>
+
+                  <div className="struggle-level">Struggle: 1/10</div>
+                  <p className="note">
+                    Trimmed down clutter in frontend. Sometimes the best code is
+                    the code you delete!
+                  </p>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">4. Props for Reuse</h2>
+
+                  <div className="struggle-level">Struggle: 1/10</div>
+                  <p className="note">
+                    Passed props to{" "}
+                    <span className="component-highlight">ExpensesSummary</span>{" "}
+                    so it can adapt to any dataset fetched from the backend.
+                    Flexibility FTW!
+                  </p>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    5. Backend Refactor: Cleaner Calculations
+                    <span className="branch-name">
+                      refactor/cleaner-calculations
+                    </span>
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 3/10</div>
+
+                  <div className="learning-section">
+                    <h3 className="learning-title">Before vs After:</h3>
+                    <div className="code-comparison">
+                      <div className="code-block">
+                        <strong>Before:</strong>
+                        <pre>
+                          {`const calcTransportExpenses = () => {
+  let sum = 0;
+  for (let index = 0; index < transportItems.length; index++) {
+    sum += transportItems[index].price;
+  }
+  return sum;
+};`}
+                        </pre>
+                      </div>
+                      <div className="code-block">
+                        <strong>After:</strong>
+                        <pre>
+                          {`const calcTransportExpenses = () =>
+  transportItems.items.reduce((sum, item) => sum + item.price, 0);`}
+                        </pre>
+                      </div>
+                    </div>
+                    <p className="note">
+                      One line, same logic, less visual noise.{" "}
+                      <span className="component-highlight">.reduce()</span>
+                      is not just cleaner, it's oddly satisfying to use.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="learning-section">
+                  <h3 className="learning-title">Important Things I Learnt:</h3>
+                  <ul className="learning-list">
+                    <li>
+                      Always handle{" "}
+                      <span className="component-highlight">
+                        setIsLoading(true/false)
+                      </span>{" "}
+                      when calling the API to avoid rendering hiccups
+                    </li>
+                    <li>
+                      Backend dynamic routing can create conflicts—fixed mine by
+                      simply reordering the lines
+                    </li>
+                    <li>
+                      <span className="component-highlight">.reduce()</span> is
+                      not just cleaner, it's oddly satisfying to use
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="funny-section">
+                  <h3 className="learning-title">
+                    Today's Funny Junior Issue:
+                  </h3>
+                  <p className="note">
+                    I have a small component that calculates and displays
+                    monthly savings, expenses, and income. What I{" "}
+                    <em>didn't</em> think about? Without a{" "}
+                    <span className="component-highlight">Math.floor()</span>,
+                    those savings numbers can get… hilariously messy. Let's just
+                    say decimals ran wild today! {happy}
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 7th",
+            moodBefore: happy,
+            moodAfter: exhausted,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Monthly Expenses Tracker
+                </h5>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Today's playlist/hit:</div>
+                  <a
+                    href="https://music.youtube.com/watch?v=qiEEMFz2Mdk&list=RDAMPLPLkGblOk4X-alFugUkNHdE7iI8wBavzRBi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/watch?v=qiEEMFz2Mdk&list=RDAMPLPLkGblOk4X-alFugUkNHdE7iI8wBavzRBi
+                  </a>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1727154737/
+"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Same Tree</strong>{" "}
+                    </a>
+                  </p>
+                </div>
+
+                <div className="documentation-section">
+                  <strong>Documentation followed: </strong>
+                  <a
+                    href="https://dev.to/egnoel/how-to-verify-jwt-token-expiry-in-reactnext-22dn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    https://dev.to/egnoel/how-to-verify-jwt-token-expiry-in-reactnext-22dn
+                  </a>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    1. JWT Expire Check in Frontend
+                  </h2>
+                  <p className="note">
+                    Implementing token expiration validation to keep the app
+                    secure.
+                  </p>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    2. Massive Update: Editable Current Month Card
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 7/10</div>
+
+                  <div className="learning-section">
+                    <h3 className="learning-title">What was implemented:</h3>
+                    <ul className="learning-list">
+                      <li>Users can now update their current month card</li>
+                      <li>
+                        This was <em>way</em> harder than expected—caused a
+                        chain reaction of bugs because I didn't plan the data
+                        flow in advance
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bug-section">
+                    <h3 className="learning-title">Issues ranged from:</h3>
+                    <ul className="learning-list">
+                      <li>How I fetched the data</li>
+                      <li>What data the backend actually needed</li>
+                      <li>What data the backend sent back</li>
+                      <li>
+                        Random "I'll just add this in the frontend" ideas that
+                        later exploded in the backend
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Today's Struggle Breakdown:</h2>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      1. Where to Put the JWT Expiration Check
+                    </h3>
+                    <div className="struggle-level">Struggle: 3/10</div>
+                    <p className="note">
+                      Debated between main, app, and Dashboard. Settled on
+                      Dashboard as the cleanest option.
+                    </p>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      2. Updating the Current Month Card
+                    </h3>
+                    <div className="struggle-level">Struggle: 8/10</div>
+                    <ul className="learning-list">
+                      <li>
+                        The loop I coded at the beginning wouldn't work with my
+                        current code due to some changes I made in the Card
+                        model in the backend. Additionally, the new items added
+                        by the user were sent to the backend in a way the
+                        backend couldn't read properly.
+                      </li>
+                      <li>
+                        Ran into the classic junior trap:{" "}
+                        <span className="component-highlight">useState</span>{" "}
+                        conflicts because the data I sent was not updated yet
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      3. The Big UpdateCard Bug
+                    </h3>
+                    <div className="struggle-level">Struggle: 10/10</div>
+                    <p className="note">
+                      Thought I had finally fixed everything… until I made a
+                      "successful" update call that
+                      <strong> deleted all the properties</strong> I actually
+                      wanted to update. Not only I didn't add new key values, I
+                      deleted the object's key, erased completely!
+                    </p>
+
+                    <div className="code-comparison">
+                      <div className="code-block">
+                        <strong>The culprit:</strong>
+                        <pre>card.fixedItems = fixedItems;</pre>
+                      </div>
+                      <div className="code-block">
+                        <strong>Instead of:</strong>
+                        <pre>card.fixedItems.items = fixedItems;</pre>
+                      </div>
+                    </div>
+
+                    <p className="note">
+                      The fix was easy, but it took a while to notice.
+                    </p>
+                  </div>
+                  <div className="victory-section">
+                    <h3 className="learning-title">Victory Moment:</h3>
+                    <p className="note">
+                      Did I clap, cheer, and do <em>the wave</em> alone in my
+                      room when I finally fixed UpdateCard and it was fully
+                      working—while my cat looked mildly concerned?{" "}
+                      <strong>OF COURSE I DID.</strong>
+                    </p>
+
+                    <div className="playlist-section">
+                      <div className="playlist-label">Victory song:</div>
+                      <a
+                        href="https://music.youtube.com/watch?v=Ns3MbpQMNBs&list=RDAMPLPLkGblOk4X-alFugUkNHdE7iI8wBavzRBi"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        https://music.youtube.com/watch?v=Ns3MbpQMNBs&list=RDAMPLPLkGblOk4X-alFugUkNHdE7iI8wBavzRBi
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 8th",
+            moodBefore: happy,
+            moodAfter: exhausted,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Monthly Expenses Tracker
+                </h5>
+
+                <div className="mood-section">
+                  <h3 className="learning-title">Mood of the Day:</h3>
+                  <p className="note">
+                    🥴 A mix of "Yes! The Library is fixed!" and "Why does
+                    everything else suddenly break when I touch it?" It's that
+                    special type of tired where you're still proud of the
+                    progress… but you also glare at your code like it personally
+                    betrayed you.
+                  </p>
+                </div>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Today's playlist/hit:</div>
+                  <a
+                    href="https://music.youtube.com/watch?v=uUnbxbHZBUc&list=RDCLAK5uy_mio8NKN0dPfEdyHxD9gDJK2iUYD4NELPk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/watch?v=uUnbxbHZBUc&list=RDCLAK5uy_mio8NKN0dPfEdyHxD9gDJK2iUYD4NELPk
+                  </a>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1728106601/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>
+                        Convert Sorted Array to Binary Search Tree
+                      </strong>{" "}
+                    </a>
+                  </p>
+                </div>
+
+                <div className="documentation-section">
+                  <strong>Documentation followed:</strong>
+                  <div className="doc-links">
+                    <ul></ul>
+                    <li>
+                      {" "}
+                      <a
+                        href="https://medium.com/@python-javascript-php-html-css/building-a-binary-search-tree-from-a-javascript-array-374678de88ab"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Building a Binary Search Tree from a JavaScript Array
+                      </a>
+                    </li>{" "}
+                    <li>
+                      <a
+                        href="https://javascript.plainenglish.io/leetcode-algorithm-challenges-convert-sorted-array-to-binary-search-tree-a0f3e7b18fd4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        LeetCode Algorithm Challenges - Convert Sorted Array to
+                        BST
+                      </a>
+                    </li>
+                    <li>
+                      {" "}
+                      <a
+                        href="https://react.dev/reference/react/useMemo"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        React useMemo Reference
+                      </a>
+                    </li>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    1. Library Component Bug—Finally Squashed
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 2/10</div>
+                  <p className="note">
+                    Created a new backend controller so the Library component
+                    now fetches <strong>all</strong> cards instead of just the
+                    last 4.
+                  </p>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    2. New Card Creation Reality Check
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 8/10</div>
+
+                  <div className="learning-section">
+                    <h3 className="learning-title">The Discovery:</h3>
+                    <ul className="learning-list">
+                      <li>
+                        Discovered I had never actually thought about{" "}
+                        <strong>how</strong> to create a new card from the
+                        frontend
+                      </li>
+                      <li>
+                        Added an ugly placeholder button and tried the backend
+                        controller… only to realize it was coded to add a fully
+                        filled card – good to test at the beginning with
+                        postman, bad for everything else :D
+                      </li>
+                      <li>
+                        New card from frontend = expected to be empty. My
+                        backend = <strong>nope.</strong>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    3. Default Items for New Cards
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 9/10</div>
+
+                  <div className="learning-section">
+                    <h3 className="learning-title">The Implementation:</h3>
+                    <p className="note">
+                      Took the opportunity to add defaultItems for each user so
+                      new cards start with a prefilled template they can
+                      customize. This was scheduled for way later on in the
+                      roadmap, but I couldn't help myself and just implemented
+                      it.
+                    </p>
+                    <p className="note">
+                      In theory, brilliant. In practice… bugs, tears, and sweat.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    4. Progress with Default Items in Mongoose
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 8/10</div>
+
+                  <div className="learning-section">
+                    <h3 className="learning-title">
+                      What worked vs what didn't:
+                    </h3>
+                    <ul className="learning-list">
+                      <li>
+                        Managed to create new users with defaultItems in the
+                        Mongoose model
+                      </li>
+                      <li>
+                        Prefilled defaults worked, but creating a{" "}
+                        <strong>new</strong> card with them? Still buggy
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Today's Struggle:</h2>
+                  <div className="struggle-level">Overall Struggle: 8.5/10</div>
+                  <p className="note">
+                    Too many to count. The biggest? My bad approach with
+                    defaultItems—I just couldn't grab their values correctly
+                    when creating a new card.
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 9th",
+            moodBefore: happy,
+            moodAfter: exhausted,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Monthly Expenses Tracker
+                </h5>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">
+                    Today's playlist/hits (I needed a lot of energy for what was
+                    coming lol):
+                  </div>
+                  <div className="playlist-links">
+                    <ul>
+                      <li>
+                        {" "}
+                        <a
+                          href="https://music.youtube.com/watch?v=HkeWAJGtlOk"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="playlist-link"
+                        >
+                          https://music.youtube.com/watch?v=HkeWAJGtlOk
+                        </a>
+                      </li>{" "}
+                      <li>
+                        <a
+                          href="https://music.youtube.com/watch?v=rkE_oBe8ABw"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="playlist-link"
+                        >
+                          https://music.youtube.com/watch?v=rkE_oBe8ABw&
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://music.youtube.com/watch?v=wKH-vf33HPc"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="playlist-link"
+                        >
+                          https://music.youtube.com/watch?v=wKH-vf33HPc
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenges of the Day:
+                  </h3>
+
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1729024624/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Merge Strings Alternately</strong>
+                    </a>
+                  </p>
+
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1729024624/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Merge Strings Alternately</strong>
+                    </a>
+                  </p>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1729043653/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Kids With the Greatest Number of Candies</strong>
+                    </a>
+                  </p>
+                </div>
+
+                <div className="diary-section">
+                  <h3 className="learning-title">Today's Victory:</h3>
+                  <p className="note">
+                    All the basics of the app are working. The victory is MINE.
+                    🎉
+                  </p>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    1. DefaultItems Nesting Issue
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 6/10</div>
+
+                  <div className="learning-section">
+                    <h3 className="learning-title">The Fix:</h3>
+                    <ul className="learning-list">
+                      <li>
+                        Discovered that my defaultItems structure was too deeply
+                        nested
+                      </li>
+                      <li>
+                        Mongoose behaved strangely with it, so I simplified the
+                        schema and shortened the code
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    2. Empty Card Creation—Finally Working
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 8/10</div>
+
+                  <div className="learning-section">
+                    <h3 className="learning-title">The Achievement:</h3>
+                    <ul className="learning-list">
+                      <li>
+                        After many attempts, the card component can now access a
+                        user's defaultItems and set them as the starting items
+                        in a new card
+                      </li>
+                      <li>
+                        Users can create an empty card… but only one per month.
+                        No duplicates allowed
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">3. Routing Bug Squashed</h2>
+
+                  <div className="struggle-level">Struggle: 3/10</div>
+                  <p className="note">
+                    Fixed a minor routing issue that was sending users to
+                    /landing instead of /.
+                  </p>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">4. Landing Page UI</h2>
+
+                  <div className="struggle-level">Struggle: 4/10</div>
+                  <p className="note">
+                    Started working on the landing page layout. Still ugly. Very
+                    ugly. But it's a start.
+                  </p>
+                </div>
+
+                <div className="final-thoughts-section">
+                  <h3 className="learning-title">Final Thought Diary:</h3>
+                  <p className="note">
+                    That satisfied-but-exhausted feeling when the big roadblock
+                    is finally gone. Today was a "code boss fight" and I won.
+                    The landing page may be ugly, but at least it exists.
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 10th",
+            moodBefore: moodBefore[1],
+            moodAfter: moodAfter[1],
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Monthly Expenses Tracker
+                </h5>
+                <div className="playlist-section">
+                  <div className="playlist-label">
+                    Today's playlist/hits, a cozy way to finish the week with my
+                    fav. Ghibli movie and soundtrack!:
+                  </div>
+                  <div className="playlist-links">
+                    <a
+                      href="https://music.youtube.com/watch?v=QojIn-Gn2sU"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      https://music.youtube.com/watch?v=QojIn-Gn2sU{" "}
+                    </a>
+                  </div>
+                  <img
+                    src="https://i.pinimg.com/736x/c4/c5/ea/c4c5eac26203b38cdd3e81702205fa9a.jpg"
+                    alt="Sunday coding vibes"
+                    style={{
+                      width: "100px",
+                      height: "100px",
+                      objectFit: "cover",
+                      borderRadius: "8px",
+                      margin: "10px 0",
+                    }}
+                  />
+                </div>
+                <div className="sunday-mode-section">
+                  <h3 className="learning-title">Sunday Mode:</h3>
+                  <p className="note">
+                    Light coding, comfy vibes, and a pinch of curiosity. Today
+                    wasn't about building features—it was about stretching the
+                    brain in a different way.
+                  </p>
+                </div>
+
+                <div className="diary-section">
+                  <h3 className="learning-title">Today's Discovery:</h3>
+                  <p className="note">
+                    I discovered a{" "}
+                    <strong>30 Days of JavaScript Challenge</strong> on LeetCode
+                    and decided to dive in. Planned for just one… ended up doing
+                    seven. (Will I do more after writing this? Possibly. Will my
+                    coffee make the decision for me? No—because I don't drink
+                    coffee past noon—but matchas are more than welcome!)
+                  </p>
+                </div>
+
+                <div className="challenge-section">
+                  <h2 className="feature-title">
+                    30 Days of JavaScript Challenge - Progress
+                  </h2>
+                  <div className="learning-section">
+                    <h3 className="learning-title">
+                      Challenges Completed Today:
+                    </h3>
+                    <p className="note">
+                      <a
+                        href="https://leetcode.com/submissions/detail/1730003520/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>Create Hello World Function</strong>
+                      </a>
+                    </p>
+                    <p className="note">
+                      <a
+                        href="https://leetcode.com/submissions/detail/1730020725/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>Counter</strong>
+                      </a>
+                    </p>
+                    <p className="note">
+                      <a
+                        href="https://leetcode.com/submissions/detail/1730052001/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>Counter II</strong>
+                      </a>
+                    </p>{" "}
+                    <p className="note">
+                      <a
+                        href="hhttps://leetcode.com/submissions/detail/1730034907/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>To Be Or Not To Be</strong>
+                      </a>
+                    </p>{" "}
+                    <p className="note">
+                      <a
+                        href="https://leetcode.com/submissions/detail/1730166283/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>
+                          Apply Transform Over Each Element in Array
+                        </strong>
+                      </a>
+                    </p>{" "}
+                    <p className="note">
+                      <a
+                        href="https://leetcode.com/submissions/detail/1730176362/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>Filter Elements from Array</strong>
+                      </a>
+                    </p>{" "}
+                    <p className="note">
+                      <a
+                        href="https://leetcode.com/submissions/detail/1730197037/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>Array Reduce Transformation</strong>
+                      </a>
+                    </p>
+                  </div>
+
+                  <div className="reflection-section">
+                    <h3 className="learning-title">
+                      Reflection on the Challenge:
+                    </h3>
+                    <p className="note">
+                      They were all easy, but useful. When you spend most of
+                      your time just coding apps, it's surprisingly easy to
+                      neglect <em>pure</em> problem-solving. Practicing it
+                      sharpens my abstraction skills—and honestly, it's fun.
+                      Sometimes frustrating, sure, but everything worth doing
+                      has a bit of frustration baked in.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">Updates</h2>
+                  <div className="learning-section">
+                    <h3 className="learning-title">Small but meaningful:</h3>
+                    <ul className="learning-list">
+                      <li>Made some very small tweaks to my portfolio</li>
+                      <li>
+                        Edited this week's blog notes so you—yes, you—are
+                        reading the latest, fresh-out-of-the-oven version
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="final-thoughts-section">
+                  <h3 className="learning-title">Sunday Vibes Summary:</h3>
+                  <p className="note">
+                    Sometimes the best coding days aren't about building
+                    features—they're about keeping the mind sharp and enjoying
+                    the process. Plus, now I'm seven challenges deeper into
+                    JavaScript fundamentals. Not a bad way to spend a Sunday!
+                    ☕️ (or should I say 🍵)
+                  </p>
+                </div>
+              </div>
+            ),
+          },
         ],
       },
     ],
