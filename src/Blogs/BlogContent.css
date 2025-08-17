@@ -132,7 +132,7 @@ body {
     border-radius: 3px;
     font-family: 'Courier New', monospace;
     font-weight: 600;
-margin-left: 5px;
+    margin-left: 5px;
 }
 
 .note {
@@ -146,4 +146,8 @@ margin-left: 5px;
     .blog-scope {
         font-size: 1.5rem;
     }
+}
+
+.difficulty {
+    margin-left: 5px;
 }

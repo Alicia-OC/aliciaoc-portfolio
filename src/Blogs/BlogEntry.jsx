@@ -1,9 +1,58 @@
-const happy = <i className="bi bi-emoji-laughing"></i>;
-const exhausted = <i className="bi bi-emoji-dizzy"></i>;
+const happy = "😄";
+const exhausted = "😵";
 const whatAMess = <i className="bi bi-emoji-smile-upside-down"></i>;
 const sad = <i className="bi bi-emoji-smile-upside-down"></i>;
 
-const moodBefore = { 1: happy, 2: exhausted, 3: whatAMess };
+const emojis = {
+  grinning: "😀",
+  smileBig: "😃",
+  smileWide: "😄",
+  beaming: "😁",
+  sweatSmile: "😅",
+  tearsOfJoy: "🥲",
+  pleadingEyes: "🥹",
+  smile: "😊",
+  slightSmile: "🙂",
+  upsideDown: "🙃",
+  yum: "😋",
+  tongue: "😛",
+  squintTongue: "😝",
+  crazy: "🤪",
+  skeptical: "🤨",
+  monocle: "🧐",
+  nerd: "🤓",
+  party: "🥳",
+  smirk: "😏",
+  unamused: "😒",
+  disappointed: "😞",
+  pensive: "😔",
+  worried: "😟",
+  confused: "😕",
+  frown: "🙁",
+  persevere: "😣",
+  confounded: "😖",
+  weary: "😩",
+  pleading: "🥺",
+  sob: "😭",
+  scream: "😱",
+  anxious: "😰",
+  sweat: "😓",
+  hugging: "🤗",
+  thinking: "🤔",
+  neutral: "😐",
+  melting: "🫠",
+  eyeRoll: "🙄",
+  yawn: "🥱",
+  sleeping: "😴",
+  sleepy: "😪",
+  dizzy: "😵",
+  spiralEyes: "😵‍💫",
+  dottedLine: "🫥",
+  woozy: "🥴",
+  sneeze: "🤧",
+};
+
+const moodBefore = { 1: "😄", 2: exhausted, 3: whatAMess };
 const moodAfter = { 1: happy, 2: exhausted, 3: whatAMess };
 
 const BlogEntry = [
@@ -917,8 +966,7 @@ res.status(200).json({ user: userWithoutPassword, token });`}
 
                   <p className="note">
                     <a
-                      href="https://leetcode.com/submissions/detail/1727154737/
-"
+                      href="https://leetcode.com/submissions/detail/1727154737/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="playlist-link"
@@ -1434,8 +1482,8 @@ res.status(200).json({ user: userWithoutPassword, token });`}
           },
           {
             date: "August 10th",
-            moodBefore: moodBefore[1],
-            moodAfter: moodAfter[1],
+            moodBefore: emojis.smileWide,
+            moodAfter: emojis.beaming,
             body: (
               <div className="blog-container">
                 <h5 className="blog-scope">
@@ -1608,6 +1656,835 @@ res.status(200).json({ user: userWithoutPassword, token });`}
                     the process. Plus, now I'm seven challenges deeper into
                     JavaScript fundamentals. Not a bad way to spend a Sunday!
                     ☕️ (or should I say 🍵)
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 11th",
+            moodBefore: emojis.smileWide,
+            moodAfter: emojis.beaming,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Monthly Expenses Tracker
+                </h5>
+
+                <div className="mood-section">
+                  <h3 className="learning-title">Mood of the Day:</h3>
+                  <p className="note">
+                    Warrior mode mixed with "Why won't this input behave?!"
+                    frustration. Ended the day early but victorious - sometimes
+                    Netflix and Breaking Bad with a cat is exactly the debugging
+                    your brain needs.
+                  </p>
+                </div>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Today's playlist/hits:</div>
+                  <div className="playlist-links">
+                    <li>
+                      <a
+                        href="https://music.youtube.com/watch?v=PPA0tHt3m5Y"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        https://music.youtube.com/watch?v=PPA0tHt3m5Y
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://music.youtube.com/watch?v=peLRPSCeppI"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        https://music.youtube.com/watch?v=peLRPSCeppI
+                      </a>
+                    </li>
+                  </div>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenges of the Day:
+                  </h3>
+                  <div className="leetcode-links">
+                    <div className="leetcode-link">
+                      <a
+                        href="https://leetcode.com/submissions/detail/1731540452/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>Function Composition</strong>
+                      </a>
+                      <span className="difficulty">1/10</span>
+                    </div>
+                    <div className="leetcode-link">
+                      <a
+                        href="https://leetcode.com/submissions/detail/1731543086/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>Return Length of Arguments Passed</strong>
+                      </a>
+                      <span className="difficulty">0/10</span>
+                    </div>
+                    <div className="leetcode-link">
+                      <a
+                        href="https://leetcode.com/submissions/detail/1731584179/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>Allow One Function Call</strong>
+                      </a>
+                      <span className="difficulty">3/10</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="documentation-section">
+                  <strong>Documentation followed:</strong>
+                  <div className="doc-links">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://jestjs.io/docs/expect#tobedefinedobject"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Jest Testing - Array.isArray() checks
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://react.dev/reference/react-dom/components/input#controlling-an-input-with-a-state-variable"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          React Controlled Input Components
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          GitHub - Linking Pull Requests to Issues
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    1. Boss Fight: The Monthcard Test Loop
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 4/10</div>
+                  <p className="note">
+                    My test file for <strong>Monthcard</strong> decided to throw
+                    a tantrum while looping through category items.{" "}
+                    <strong>Strategy:</strong> Give it a .filter before mapping
+                    so it doesn't choke on empty data. Victory achieved.
+                  </p>
+
+                  <div className="code-block">
+                    <br /> .filter(
+                    <pre>
+                      {" "}
+                      &nbsp;&nbsp;(category) ={">"} category &&
+                      Array.isArray(category.items)
+                      <br />)
+                    </pre>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">2. Test Garden Maintenance</h2>
+
+                  <div className="struggle-level">Struggle: 2/10</div>
+
+                  <div className="learning-section">
+                    <p className="note">
+                      Some tests had been sitting in the corner gathering dust.
+                      Cleaned them up, watered them, and even planted a new one:
+                      a test to make sure the <strong>Home</strong>
+                      button spawns a new card via API call. 🌱
+                    </p>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    3. The Bug That Lived in My Input
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 6/10</div>
+
+                  <div className="learning-section">
+                    <h3 className="learning-title">The Discovery:</h3>
+                    <p className="note">
+                      Story time: I'd add a new item, clear the state, yet… the
+                      input <strong>refused</strong> to empty, which also bugged
+                      the possibility of adding a replica of the same item. So
+                      if I was to add x1 coffe 2.5€ and add the exact same item,
+                      I wouldn't be able to do so because the input hadn't been
+                      cleared. Turns out, I never told the &lt;input&gt; who was
+                      in charge. <strong>Fix: </strong>{" "}
+                      <pre> Adding 'value={"newItems"}' to the input</pre> And
+                      order was restored to the kingdom.
+                    </p>
+                    <p className="note">
+                      I also learnt how to close an issue when merging a pull
+                      request!
+                    </p>
+                  </div>
+                </div>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Today's Summary:</h2>
+                  <div className="struggle-level">Overall Struggle: 4/10</div>
+                  <p className="note">
+                    ⏱ <strong>Total Dev Time:</strong> 2h 40m
+                    <br />
+                    Ended early at 9:30 pm — wasn't feeling 100%, so I traded
+                    the keyboard for Netflix (Breaking Bad) & chill (cat and
+                    AC).
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 12th",
+            moodBefore: emojis.monocle,
+            moodAfter: emojis.smileWide,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Monthly Expenses Tracker
+                </h5>
+
+                <div className="mood-section">
+                  <h3 className="learning-title">Summary:</h3>
+                  <p className="note">
+                    🧠 That "aha!" moment when you discover something you didn't
+                    know existed, mixed with the slight embarrassment of finding
+                    duplicate code you wrote yourself. Classic developer day -
+                    learning and cleaning up your own mess!
+                  </p>
+                </div>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Today's playlist/hit:</div>
+                  <a
+                    href="https://music.youtube.com/watch?v=AeedWEyMYYo&list=RDCLAK5uy_nmS3YoxSwVVQk9lEQJ0UX4ZCjXsW_psU8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/watch?v=AeedWEyMYYo&list=RDCLAK5uy_nmS3YoxSwVVQk9lEQJ0UX4ZCjXsW_psU8
+                  </a>
+                </div>
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1732413749/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      {" "}
+                      <strong>Memoize</strong>
+                    </a>{" "}
+                  </p>
+                </div>
+                <div className="documentation-section">
+                  <strong>Documentation followed:</strong>
+                  <div className="doc-links">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://www.freecodecamp.org/news/understanding-memoize-in-javascript-51d07d19430e/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Understanding Memoize in JavaScript - FreeCodeCamp
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="diary-section">
+                  <h3 className="learning-title">Today's Discovery:</h3>
+                  <p className="note">
+                    Super useful article about memoization! I had heard about
+                    Lodash and everything mentioned in the article made sense to
+                    me. I didn't struggle to understand the concept but I didn't
+                    know memoization was a thing!
+                  </p>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    1. Duplicate Controller Gremlin
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 3/10</div>
+
+                  <div className="learning-section">
+                    <h3 className="learning-title">The Discovery:</h3>
+                    <p className="note">
+                      I realized I had written <strong>two</strong> controllers
+                      that did the same thing. The <code>userControllers</code>{" "}
+                      file already had logic to fetch all the users' cards.
+                      Lesson learned: planning {">"} panic coding.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    2. Default Items Consistency
+                  </h2>
+
+                  <div className="struggle-level">Struggle: 5/10</div>
+
+                  <div className="learning-section">
+                    <h3 className="learning-title">The Fix:</h3>
+                    <p className="note">
+                      While adding default items via frontend, saw
+                      inconsistency: items were structured differently in{" "}
+                      <code>monthCard</code> vs. <code>defaultItems</code> in
+                      users. Reworked to align both structures for consistency.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="final-thoughts-section">
+                  <h3 className="learning-title">Final Thought:</h3>
+                  <p className="note">
+                    Short but productive session. Sometimes the best days are
+                    when you clean up technical debt and learn something
+                    completely new. Memoization just opened up a whole new world
+                    of optimization possibilities!
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 13th",
+            moodBefore: emojis.smile,
+            moodAfter: emojis.slightSmile,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Monthly Expenses Tracker
+                </h5>
+
+                <div className="mood-section">
+                  <h3 className="learning-title">Mood of the Day:</h3>
+                  <p className="note">
+                    🎵 Chill evening vibes with some promise-wrestling on the
+                    side. Started late but kept it light - sometimes the best
+                    sessions are the ones where you fix the little things that
+                    have been bugging you.
+                  </p>
+                </div>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Today's playlist/hits:</div>
+                  <div className="playlist-links">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://music.youtube.com/watch?v=sgj04v5sDm4&list=RDCLAK5uy_khs3a0YMI9WYs2k1Oqb2ukWX3dA3-lnwI"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="playlist-link"
+                        >
+                          https://music.youtube.com/watch?v=sgj04v5sDm4&list=RDCLAK5uy_khs3a0YMI9WYs2k1Oqb2ukWX3dA3-lnwI
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://music.youtube.com/watch?v=IWdLFZfMIYg&list=RDCLAK5uy_khs3a0YMI9WYs2k1Oqb2ukWX3dA3-lnwI"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="playlist-link"
+                        >
+                          https://music.youtube.com/watch?v=IWdLFZfMIYg&list=RDCLAK5uy_khs3a0YMI9WYs2k1Oqb2ukWX3dA3-lnwI
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenges of the Day:
+                  </h3>
+                  <div className="leetcode-links">
+                    <div className="leetcode-link">
+                      <a
+                        href="https://leetcode.com/submissions/detail/1734033654/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>Add Two Promises</strong>
+                      </a>
+                      <span className="difficulty">7/10</span>
+                    </div>
+                    <div className="leetcode-link">
+                      <a
+                        href="https://leetcode.com/submissions/detail/1734046149/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>Sleep</strong>
+                      </a>
+                      <span className="difficulty">
+                        5/10 - Easy once I resolved the previous one, haven't
+                        seen much about promises.
+                      </span>
+                    </div>
+                    <div className="leetcode-link">
+                      <a
+                        href="https://leetcode.com/submissions/detail/1734111660/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>Timeout Cancellation</strong>
+                      </a>
+                      <span className="difficulty">10/10</span>
+                    </div>
+                    <div className="leetcode-link">
+                      <a
+                        href="https://leetcode.com/submissions/detail/1734124141/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        <strong>Is Object Empty</strong>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="documentation-section">
+                  <strong>Documentation followed:</strong>
+                  <div className="doc-links">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://medium.com/insiderengineering/mastering-javascript-promises-from-basics-to-advanced-f24669381c56"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Mastering JavaScript Promises: From Basics to Advanced
+                          - Medium
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">1. CSS Layout Adjustments</h2>
+
+                  <div className="struggle-level">Struggle: 2/10</div>
+
+                  <div className="learning-section">
+                    <p className="note">
+                      Fixed a couple of bugs, but most of the time went into CSS
+                      — the profile and edit card sections were way too narrow,
+                      so I finally adjusted them. Sometimes it's the small UI
+                      improvements that make the biggest difference!
+                    </p>
+                  </div>
+                </div>
+
+                <div className="diary-section">
+                  <h3 className="learning-title">Today's Session Notes:</h3>
+                  <p className="note">
+                    Started coding at 8:25pm. Light session overall. The promise
+                    challenges were a good warm-up, especially since I haven't
+                    worked much with promises before. That timeout cancellation
+                    one really tested me! 💪
+                  </p>
+                </div>
+
+                <div className="final-thoughts-section">
+                  <h3 className="learning-title">Final Thought:</h3>
+                  <p className="note">
+                    Sometimes the best coding sessions are the chill ones where
+                    you tackle the little annoyances that have been piling up.
+                    Clean UI, working promises, and good music - what more could
+                    you ask for?
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 15th",
+            moodBefore: emojis.frown,
+            moodAfter: emojis.smileWide,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Monthly Expenses Tracker
+                </h5>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Mood-lifting playlist:</div>
+                  <a
+                    href="https://music.youtube.com/playlist?list=RDCLAK5uy_mfdqvCAl8wodlx2P2_Ai2gNkiRDAufkkI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/playlist?list=RDCLAK5uy_mfdqvCAl8wodlx2P2_Ai2gNkiRDAufkkI
+                  </a>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenges of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1736279309/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Array Prototype Last</strong>
+                    </a>{" "}
+                    - 4/10 difficulty
+                  </p>
+                  <div className="code-block">
+                    <pre>{`Array.prototype.last = function () {
+    return this.length ? this[this.length - 1] : -1
+};`}</pre>
+                  </div>
+
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1736309006/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Group By</strong>
+                    </a>
+                  </p>
+                  <div className="code-block">
+                    <pre>{`Array.prototype.groupBy = function (fn) {
+    const result = {}
+    for (let i = 0; i < this.length; i++) {
+        let n = this[i]
+        const key = fn(n);
+        if (!result[key]) {
+            result[key] = [];
+        }
+        result[key].push(n)
+    };
+    return result
+}`}</pre>
+                  </div>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1736271572/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Chunk Array</strong>
+                    </a>
+                  </p>
+                  <div className="code-block">
+                    <pre>{`var chunk = function (arr, size) {
+    let result = []
+    let firstIndex = 0
+    let lastIndex = size
+
+    for (let i = 0; i < arr.length; i += size) {
+        result.push(arr.slice(i, i + size))
+    }
+    return result
+}`}</pre>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    August 15th: Job Hunt Reality Check
+                  </h2>
+                  <p className="note">
+                    ☹ Feeling a bit discouraged today. Programming is fun, but
+                    looking for an IT job… is not that fun. It's tough for
+                    someone who doesn't have a CS degree or work experience,
+                    even though I program almost every single day. I don't get
+                    the same chances people who have a degree or experience
+                    would get. Still, I just need to keep going and stop
+                    overthinking this.
+                  </p>
+                  <p className="note">
+                    I was this close to listening to sad music… but instead, I
+                    forced myself into a happier playlist. Did it help?
+                    Honestly, a little bit. Once I dove into programming, my
+                    mood completely turned around. Coding isn't just something I
+                    want to do for a career—it's actually something I enjoy
+                    deeply.
+                  </p>
+                </div>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Today's Development Work:</h2>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      1. Junior Mistake of the Day
+                    </h3>
+                    <div className="struggle-level">
+                      Struggle: logic 0/10 - time to realise what's going on
+                      1000/10
+                    </div>
+                    <p className="note">
+                      Spent nearly 30 minutes debugging a 404 on an API call.
+                      Turned out my server was started with <strong>npm</strong>{" "}
+                      instead of <strong>npx</strong>. I had been making changes
+                      in the code, but the server didn't restart automatically
+                      so the routing changes didn't affect the running server 😅
+                    </p>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      2. UserProfile Refactoring
+                    </h3>
+                    <div className="struggle-level">Struggle: 4/10</div>
+                    <ul className="learning-list">
+                      <li>
+                        Refactored userProfile by creating a separate component
+                        for defaultItems—it was getting messy
+                      </li>
+                      <li>
+                        Hooked up backend + frontend so default items can now be
+                        updated by users
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      3. Filter Per Month/Year Feature
+                    </h3>
+                    <div className="struggle-level">Struggle: 8/10</div>
+                    <p className="note">
+                      <strong>New branch:</strong> add filter per month/year
+                      (step 4 in the roadmap). I almost lost my mind — the card
+                      documents have a year key that looks fine at first glance,
+                      but retrieving the data returned undefined in both backend
+                      and frontend.
+                    </p>
+
+                    <div className="bug-section">
+                      <h4 className="learning-title">The Problem:</h4>
+                      <div className="code-block">
+                        <pre>{`const user = await User.findById(userid).populate({
+    path: "cards",
+    select: "id month **year** foodExpenses subscriptionExpenses transportExpenses otherExpenses",
+});`}</pre>
+                      </div>
+                      <p className="note">
+                        I had simply forgotten to include{" "}
+                        <span className="component-highlight">year</span> in the
+                        mongoose populate method 😅
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      4. Ordering Cards by Year and Month
+                    </h3>
+                    <div className="struggle-level">Struggle: 5/10</div>
+                    <p className="note">
+                      Added logic to sort them, but I'm still unsure where it
+                      should go. For now, it's in the "get all cards"
+                      controller, but maybe it makes more sense to put it in the
+                      "new card" controller so the sorting happens whenever a
+                      new card is added.
+                    </p>
+                  </div>
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      5. Backend Helpers Implementation
+                    </h3>
+                    <div className="struggle-level">Struggle: 3/10</div>
+                    <p className="note">
+                      Really cool session! I started creating helpers in the
+                      backend as the app grows. Made one for expenses
+                      calculations since that logic will be used in three
+                      different controllers.
+                    </p>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">6. UI Improvements</h3>
+                    <div className="struggle-level">Struggle: 2/10</div>
+                    <p className="note">
+                      Tweaked the summary widget — it's looking nice now.
+                    </p>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      7. Pull Requests Revelation
+                    </h3>
+                    <div className="struggle-level">Struggle: 1/10</div>
+                    <p className="note">
+                      Just realized I've been using pull requests wrong all
+                      along lol. Now I know they're really only meant for when a
+                      branch's purpose is complete 😅
+                    </p>
+                  </div>
+                </div>
+
+                <div className="learning-section">
+                  <h3 className="learning-title">
+                    Unexpected thing I learned today:
+                  </h3>
+                  <p className="note">
+                    <em>
+                      The Promise constructor takes (resolve, reject) as
+                      parameters. Since we only need reject and never use
+                      resolve, we can use _ as a convention to indicate "unused
+                      parameter"
+                    </em>
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 16th",
+            moodBefore: emojis.smileWide,
+            moodAfter: emojis.slightSmile,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Monthly Expenses Tracker & GitHub
+                  battles
+                </h5>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Mood-lifting playlist:</div>
+                  <a
+                    href="https://music.youtube.com/watch?v=eZCWyFNV_ZM&list=LM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/watch?v=eZCWyFNV_ZM&list=LM
+                  </a>
+                </div>
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1738559007/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Array Wrapper</strong>
+                    </a>
+                    <p className="note">
+                      I almost never use{" "}
+                      <span className="component-highlight">Classes</span> in my
+                      own projects, so solving this problem on LeetCode was both
+                      refreshing and a great way to learn. Problem-solving
+                      really pushes me out of my usual coding habits—and I'm
+                      picking up a lot! 😊
+                    </p>
+                  </p>
+                </div>
+
+                <div className="struggle-section">
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      1. User Profile Enhancement
+                    </h3>
+                    <div className="struggle-level">Struggle: 3/10</div>
+                    <p className="note">
+                      I added a{" "}
+                      <strong>new rendered section in the user profile</strong>{" "}
+                      so users can see their default items right away—no need to
+                      dive into the editing section anymore.
+                    </p>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      2. The Great GitHub Battle Continues
+                    </h3>
+                    <p className="note">
+                      Still battling with GitHub 😅. My contribution grid isn't
+                      updating, and at first I realized the issue was that I had
+                      different users set up: one on my local repo and another
+                      owning the online repo. I fixed that, but for some reason
+                      the grid still won't update.
+                    </p>
+                    <p className="note">
+                      <strong>The fight continues!</strong>
+                    </p>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      3. Sunday Blog Update Routine
+                    </h3>
+                    <p className="note">
+                      As usual, Sundays are my blog update days, when I gather
+                      all the week's entries. I did skip{" "}
+                      <strong>August 14th</strong>, though—I had some medical
+                      appointments and got home really late.
+                    </p>
+                    <p className="note">
+                      Nothing serious, just routine physical therapy for my
+                      almost-healed fracture! 💪✨
+                    </p>
+                  </div>
+                </div>
+
+                <div className="victory-section">
+                  <h3 className="learning-title">Reflection:</h3>
+                  <p className="note">
+                    LeetCode continues to be a great teacher, pushing me into
+                    coding patterns I don't normally use. Each challenge is like
+                    a mini-adventure in problem-solving!
                   </p>
                 </div>
               </div>
