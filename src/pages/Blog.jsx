@@ -2,7 +2,6 @@ import "./Blog.css";
 
 import BlogEntry from "../Blogs/BlogEntry";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 import Avatar from "../img/Avatar.png";
 import useMobileToggle from "../components/useMobileToggle";
@@ -15,7 +14,7 @@ const Blog = () => {
 
   const [blog, setBlog] = useState(latestBlog);
   const [isSidebarClosed, setIsSidebarClosed] = useState(false);
-  const [isOpen, setIsOpen] = useState(null);
+  const [isOpen, setIsOpen] = useState(latestMonth);
 
   const [hashtag, setHashtag] = useState(itemsSize - 1);
   const [hashtagMonth, setHashtagMonth] = useState(latestMonth);

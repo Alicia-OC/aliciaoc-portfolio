@@ -2490,6 +2490,643 @@ res.status(200).json({ user: userWithoutPassword, token });`}
               </div>
             ),
           },
+          {
+            date: "August 18th",
+            moodBefore: emojis.smileWide,
+            moodAfter: emojis.party,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Monthly Expenses Tracker
+                </h5>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Mood-lifting playlist:</div>
+                  <a
+                    href="https://music.youtube.com/watch?v=WjqoqTFoqIA&list=LM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/watch?v=WjqoqTFoqIA&list=LM
+                  </a>
+                  <br />
+                  <a
+                    href="https://music.youtube.com/watch?v=gZYtes1RO_w"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/watch?v=gZYtes1RO_w
+                  </a>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1739586455/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Calculator with Method Chaining</strong>
+                    </a>{" "}
+                    - 3/10 difficulty
+                  </p>
+                </div>
+
+                <div className="topic-section">
+                  <p className="note">
+                    ☹ Started the day feeling a bit overwhelmed by some tricky
+                    state management issues, but once I dove into the debugging
+                    process, things started clicking into place. There's
+                    something satisfying about untangling complex bugs! 😊
+                  </p>
+                </div>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Today's Development Work:</h2>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">1. Redux Bug Discovery</h3>
+                    <div className="struggle-level">Struggle: 6/10</div>
+                    <p className="note">
+                      Found a sneaky bug: when users update their{" "}
+                      <strong>default items</strong>, the changes don't show up
+                      in their <strong>summary details</strong> unless they log
+                      out and back in. Why? Because the summary relies on the
+                      Redux state, not direct API calls, while the editing
+                      window <em>does</em> call the API. Lesson learned: always
+                      keep state and API updates in sync.
+                    </p>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      2. New Feature Shipped 🎉
+                    </h3>
+                    <div className="struggle-level">Struggle: 3/10</div>
+                    <p className="note">
+                      I wrapped up a feature where a card now gets created
+                      automatically upon the user's first login of the month.
+                      That makes the old "Create new" button kind of pointless.
+                      My plan is to repurpose it so users can create a card for
+                      any custom month/year they like.
+                    </p>
+                    <p className="note">
+                      Also had a fun new idea 💡: letting users{" "}
+                      <strong>name</strong> their cards. That way, the app won't
+                      just be about monthly expenses—it could also track
+                      specific budgets, like "Japan Trip 2025" or "Wedding
+                      Budget."
+                    </p>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      3. The Currency Rabbit Hole 🌀
+                    </h3>
+                    <div className="struggle-level">Struggle: 8/10</div>
+                    <p className="note">
+                      Oh boy. I thought fixing the currency display bug would be
+                      a quick win ("it's just one letter, right?"). Wrong. That
+                      "one letter" is fetched from so many places in the app
+                      that I started questioning my life choices.
+                    </p>
+                    <p className="note">
+                      I debated whether to tie currencies to users or to cards.
+                      My conclusion:
+                    </p>
+                    <ul className="learning-list">
+                      <li>
+                        <strong>Monthcards</strong> will hold the currency, so
+                        we preserve what currency was in use when the card was
+                        created.
+                      </li>
+                      <li>
+                        <strong>User model</strong> will still have a currency
+                        for consistency, especially for yearly summaries and
+                        defaults.
+                      </li>
+                    </ul>
+
+                    <div className="playlist-section">
+                      <div className="playlist-label">Fight song:</div>
+                      <a
+                        href="https://music.youtube.com/watch?v=qp49k3xK1NE"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="playlist-link"
+                      >
+                        https://music.youtube.com/watch?v=qp49k3xK1NE
+                      </a>
+                    </div>
+
+                    <p className="note">
+                      So, currencies will be accessed like this:
+                    </p>
+                    <ol className="learning-list">
+                      <li>Editing card → card currency</li>
+                      <li>Viewing card → card currency</li>
+                      <li>Yearly summary → user's currency</li>
+                      <li>Editing default items → user's currency</li>
+                    </ol>
+                    <p className="note">
+                      Not the most glamorous update, but a necessary one to keep
+                      things logical and future-proof.
+                    </p>
+                  </div>
+                </div>
+                <div className="learning-section">
+                  <h3 className="learning-title">Note of the day:</h3>
+                  <p className="note">
+                    <em>
+                      State management in Redux requires careful coordination
+                      between API calls and state updates. When you update data
+                      through an API, you also need to update the Redux store to
+                      keep the UI in sync, or users will see stale data.
+                    </em>
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 19th",
+            moodBefore: emojis.smileWide,
+            moodAfter: emojis.smileWide,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Redux State Updates & Event Emitter
+                  Challenge
+                </h5>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Learning resource:</div>
+                  <a
+                    href="https://www.freecodecamp.org/news/how-to-use-classes-in-javascript-handbook/#heading-hold-on-a-second-are-we-saying-functions-are-bad-now"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    How to Use Classes in JavaScript - FreeCodeCamp
+                  </a>
+                </div>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Mood-lifting playlist:</div>
+                  <a
+                    href="https://music.youtube.com/watch?v=xZdK1OSlHME"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/watch?v=xZdK1OSlHME
+                  </a>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/accounts/login/?next=/submissions/detail/1740927460/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Event Emitter</strong>
+                    </a>{" "}
+                    - Very challenging for me
+                  </p>
+                  <div className="code-block">
+                    <pre>{`class EventEmitter {
+    constructor() {
+        this.events = {}
+    }
+    subscribe(eventName, callback) {
+        if (eventName === undefined) {
+            return
+        }
+        if (this.events[eventName]) {
+            this.events[eventName].push(callback)
+        } else {
+            this.events[eventName] = [callback]
+        }
+        return {
+            unsubscribe: () => {
+                const index = this.events[eventName].indexOf(callback)
+                this.events[eventName].splice(index, 1)
+                return undefined
+            },
+        }
+    }
+    emit(eventName, args = []) {
+        if (!this.events[eventName]) {
+            return []
+        }
+ 
+        let result = []
+        let methods = this.events[eventName]
+ 
+        for (let i = 0; i < methods.length; i++) {
+            result.push(methods[i](...args))
+        }
+ 
+        return result
+    }
+}`}</pre>
+                  </div>
+                </div>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Today's Development Work:</h2>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      1. Tackling the Redux State Elephant 🐘
+                    </h3>
+                    <div className="struggle-level">Struggle: 3/10</div>
+                    <p className="note">
+                      Today I finally addressed one of the elephants in the
+                      room: updating the user's Redux state whenever it gets
+                      updated in the backend.
+                    </p>
+                    <p className="note">
+                      Honestly? It took me way less time than I expected. I had
+                      been avoiding it because the phrase "first time" makes
+                      things sound scarier than they really are. But once I
+                      jumped in, it wasn't nearly as complicated as I had built
+                      it up in my head.
+                    </p>
+                    <p className="note">
+                      Moral of the story: don't let "first times" intimidate
+                      you. Just because it's new doesn't mean it has to be hard.
+                      Sometimes, the monster under the bed turns out to be a
+                      tiny bug. 🐛
+                    </p>
+                  </div>
+                </div>
+
+                <div className="learning-section">
+                  <h3 className="learning-title">
+                    Unexpected thing I learned today:
+                  </h3>
+                  <p className="note">
+                    <em>
+                      Event emitters are foundational to understanding how
+                      JavaScript handles asynchronous events and callbacks. The
+                      subscribe/unsubscribe pattern is everywhere in modern
+                      frameworks, and implementing one from scratch really
+                      clarifies how observer patterns work.
+                    </em>
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 21st",
+            moodBefore: emojis.melting,
+            moodAfter: emojis.melting,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Learning about PRD & Problem Solving
+                </h5>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Learning resources:</div>
+                  <a
+                    href="https://www.aha.io/roadmapping/guide/release-management/what-is-user-story-mapping#:~:text=User%20story%20mapping%20is%20a%20visual%20exercise%20that%20helps%20product,team%20to%20better%20prioritize%20work."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    User Story Mapping Guide - Aha!
+                  </a>
+                  <br />
+                  <a
+                    href="https://zapier.com/blog/user-stories/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    User Stories Guide - Zapier
+                  </a>
+                  <br />
+                  <a
+                    href="https://carlinyuen.medium.com/writing-prds-and-product-requirements-2effdb9c6def"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    Writing PRDs and product requirements
+                  </a>
+                  <br />
+                  <a
+                    href="https://productschool.com/blog/product-strategy/product-template-requirements-document-prd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    The Only Product Requirements Document (PRD) Template You
+                    Need
+                  </a>
+                  <br />
+                  <a
+                    href="https://rohandehal.notion.site/Best-Practice-PRD-Framework-Think-Different-Build-Better-6ca85e4631cf4b8db4f1c22649c5785e"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    Best Practice PRD Framework: Think Different, Build Better
+                  </a>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1743644067/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Power of Two</strong>
+                    </a>
+                  </p>
+                  <div className="code-block">
+                    <pre>{`var isPowerOfTwo = function (n) {
+    if (n <= 0) return false;
+ 
+    while (n > 1) {
+        if (n % 2 !== 0) return false;
+        n /= 2;
+    }
+ 
+    return true;
+};`}</pre>
+                  </div>
+                </div>
+                <p className="note">
+                  Today was about reading and learning about PRD for an
+                  assignment!
+                </p>
+              </div>
+            ),
+          },
+          {
+            date: "August 23rd",
+            moodBefore: emojis.smile,
+            moodAfter: emojis.smile,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Monthly Expenses Tracker
+                </h5>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Mood-lifting playlist:</div>
+                  <a
+                    href="https://music.youtube.com/watch?v=5G-EkBYXfWU"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/watch?v=5G-EkBYXfWU
+                  </a>
+                  <br />
+                  <a
+                    href="https://music.youtube.com/watch?v=C7erVqk1grk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/watch?v=C7erVqk1grk
+                  </a>
+                </div>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Today's Development Work:</h2>
+                  <p className="note">
+                    After a tough week, today was all about having fun and
+                    lifting my spirits through programming—taking it one day at
+                    a time
+                  </p>
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      1. DataByYear Synchronization Bug Fix
+                    </h3>
+                    <div className="struggle-level">Struggle: 6/10</div>
+
+                    <h4 className="learning-title">Problem</h4>
+                    <p className="note">
+                      When users updated their card information, the dataByYear
+                      property wasn't being properly synchronized between the
+                      backend and frontend:
+                    </p>
+                    <ul className="learning-list">
+                      <li>
+                        <strong>Backend:</strong> Failed to update the user's
+                        dataByYear property after card updates
+                      </li>
+                      <li>
+                        <strong>Frontend:</strong> Redux state wasn't reflecting
+                        the latest dataByYear value after updates
+                      </li>
+                    </ul>
+
+                    <h4 className="learning-title">Solution</h4>
+                    <ul className="learning-list">
+                      <li>
+                        Updated backend logic to properly refresh dataByYear
+                        when card information is modified
+                      </li>
+                      <li>
+                        Enhanced frontend Redux actions to sync the updated
+                        dataByYear value with the application state
+                      </li>
+                    </ul>
+
+                    <h4 className="learning-title">Testing</h4>
+                    <ul className="learning-list">
+                      <li>
+                        Verified dataByYear updates correctly in database after
+                        card modification
+                      </li>
+                      <li>
+                        Confirmed Redux state reflects updated dataByYear value
+                      </li>
+                      <li>Tested user flow from card update to data display</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="learning-section">
+                  <h3 className="learning-title">Note of the day:</h3>
+                  <p className="note">
+                    <em>
+                      Synchronization between backend data and frontend state
+                      requires careful attention to every update pathway. It's
+                      not enough to fix the initial data flow - you need to
+                      ensure that all subsequent modifications properly
+                      propagate through the entire system.
+                    </em>
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 24th",
+            moodBefore: emojis.frown,
+            moodAfter: emojis.smileWide,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Landing Page Design & Workflow
+                  Organization
+                </h5>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Mood-lifting playlist:</div>
+                  <a
+                    href="https://music.youtube.com/watch?v=72CFsLWqjtI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/watch?v=72CFsLWqjtI
+                  </a>
+                </div>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Learning resource:</div>
+                  <a
+                    href="https://www.freecodecamp.org/news/javascript-debounce-example/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    JavaScript Debounce Example - FreeCodeCamp
+                  </a>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/problems/debounce?envType=study-plan-v2&envId=30-days-of-javascript"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>2627. Debounce</strong>
+                    </a>
+                  </p>
+                  <div className="code-block">
+                    <pre>{`var debounce = function (fn, t) {
+    let timer;
+    return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            fn(...args);
+            timer = null
+        }, t);
+    }
+};`}</pre>
+                  </div>
+                </div>
+
+                <div className="topic-section">
+                  <h2 className="feature-title">
+                    Creative Breakthroughs & Streak Reflections
+                  </h2>
+                  <p className="note">
+                    It's been a really long week, and I didn't get as much
+                    programming time as I'd hoped. The saddest part? I lost my
+                    LeetCode streak. But sometimes taking a step back leads to
+                    creative breakthroughs! 😊
+                  </p>
+                </div>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Today's Development Work:</h2>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">1. Landing Page Progress</h3>
+                    <p className="note">
+                      Today I finally started working on the landing page
+                      layout. I was feeling stuck creatively, so I grabbed my
+                      iPad, moved to the sofa, and let my mind wander. It
+                      worked—I ended up with a decent sketch and even spent
+                      quite a while drawing a cute little image for the landing
+                      page. Inspiration may have been scarce, but that tiny
+                      spark was enough to get me going. There is still a lot of
+                      work to do, but at leats the Landing page isn-t a plain
+                      pink block anymore!
+                    </p>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">2. New Branches Created</h3>
+                    <p className="note">
+                      I also organized my workflow a bit more by creating two
+                      new branches:
+                    </p>
+                    <ul className="learning-list">
+                      <li>
+                        <strong>feature/css</strong> → for CSS-only sessions
+                      </li>
+                      <li>
+                        <strong>bugfixes</strong> → for small bug fixes (mostly
+                        typo-related)
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="learning-section">
+                  <h3 className="learning-title">
+                    Unexpected thing I learned today:
+                  </h3>
+                  <p className="note">
+                    <em>
+                      Debouncing is a crucial technique for performance
+                      optimization, especially in user interfaces. It prevents
+                      expensive operations from running too frequently by
+                      delaying execution until after a specified period of
+                      inactivity. Perfect for search inputs, resize events, and
+                      API calls.
+                    </em>
+                  </p>
+                </div>
+                <div className="final-thoughts-section">
+                  <h2 className="feature-title">Final Thought</h2>
+                  <p className="note">
+                    It's been a really long week, and I didn't get as much
+                    programming time as I'd hoped, although Monday was a
+                    fantastic session! The saddest part? I lost my LeetCode
+                    streak. My goal was to reach 365 days straight, but I guess
+                    missing on day 26 is better than missing on day 200.
+                  </p>
+                  <p className="note">
+                    26 days may not sound like much, but hey—it's a start. I'll
+                    just pick myself up and begin again. 🚀
+                  </p>
+                </div>
+              </div>
+            ),
+          },
         ],
       },
     ],
