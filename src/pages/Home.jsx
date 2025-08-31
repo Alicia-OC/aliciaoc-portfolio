@@ -4,7 +4,6 @@ import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-
 import Header from "../components/Header";
 
 import ContactMe from "../components/ContactMe";
@@ -17,7 +16,6 @@ import SSkillsEducation from "../components/SSkillsEducation";
 import ExperienceCertifications from "../components/ExperienceCertifications";
 
 const Home = () => {
-
   useEffect(() => {
     AOS.init({
       duration: 1000, // optional settings like animation duration
@@ -27,7 +25,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="main ">
+      <div className="main">
         <section id="about" className="about section">
           <div
             className="container section-title"
@@ -37,14 +35,14 @@ const Home = () => {
             <Header />
           </div>
 
-          <div className="container">
+          <div className="container who-am-i-section">
             <div className="row align-items-center">
               <ContactMe />
               <WhoAmI />
             </div>
           </div>
         </section>
-        <section id="resume" className="main-page">
+        <section id="resume-p1" className="main-page resume-p1">
           <div
             className="container section-title"
             data-aos="zoom-in"
@@ -68,6 +66,9 @@ const Home = () => {
               <Projects />
             </div>
           </div>
+        </section>
+        <section id="resume-p1" className="main-page resume-p2">
+          {" "}
           <div
             className="container section-div"
             data-aos="fade-up"

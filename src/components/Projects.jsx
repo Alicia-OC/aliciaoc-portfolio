@@ -42,7 +42,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   href="https://www.canva.com/design/DAGe7Bom7yI/sq2hJJ1HwOltWwn8eqv7ZA/view?utm_content=DAGe7Bom7yI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf352dd1221"
                 >
-                  Check the Roadmap
+                  Roadmap
                 </a>
               </p>
             </div>
