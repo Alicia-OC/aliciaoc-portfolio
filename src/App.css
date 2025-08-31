@@ -141,6 +141,24 @@ section {
   .profile-image {
     max-width: 250px;
   }
+
+  .buttons-container button{
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem !important;
+  }
+
+  .pyramid-btn:nth-child(2) {
+    grid-column: 1;
+
+  }
+
+  .pyramid-btn:nth-child(3) {
+    grid-column: 2;
+  }
+
+  .pyramid-btn:nth-child(4) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
 }
 
 @media (min-width: 400px) and (max-width: 550px) {
@@ -313,7 +331,8 @@ h4::before {
 }
 
 .my-links:hover {
-  font-size: 0.945rem; /* 0.9 * 1.05 = 0.945 */
+  font-size: 0.945rem;
+  /* 0.9 * 1.05 = 0.945 */
   color: var(--blue-accent-color);
 }
 
@@ -321,6 +340,7 @@ h4::before {
   transform: scale(1.05);
   transform-origin: left;
 }
+
 .p-with-link a {
   margin-top: 2px;
   color: var(--pink-color);
@@ -335,10 +355,8 @@ h4::before {
 }
 
 .p-with-link {
-  display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
-
 }
 
 
