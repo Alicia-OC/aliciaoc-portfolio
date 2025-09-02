@@ -372,8 +372,7 @@ h4::before {
 .footer {
   color: #ccc;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   border-top: 2px solid var(--pink-color);
 }
 
