@@ -7,7 +7,7 @@ Originally, my GitHub Pages site was just meant to host my **CV** — a cleaner,
 ## 🌐 Live Portfolio
 
 <a href="https://alicia-oc.github.io/aliciaoc-portfolio/">
-  <img src="./img/Avatar.png" alt="Portfolio Preview" width="200">
+  <img src="./img/Avatar-readme.png" alt="Portfolio Preview" width="200">
 </a>
 > 👆 **Click the image above to visit my live portfolio!**
 
