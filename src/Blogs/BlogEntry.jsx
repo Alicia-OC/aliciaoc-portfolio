@@ -3127,6 +3127,836 @@ res.status(200).json({ user: userWithoutPassword, token });`}
               </div>
             ),
           },
+          {
+            date: "August 25th",
+            moodBefore: emojis.neutral,
+            moodAfter: emojis.smileWide,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Asynchronous Functions & Profile
+                  Updates
+                </h5>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <strong>Execute Asynchronous Functions in Parallel</strong>{" "}
+                    - 8/10 struggle
+                  </p>
+                  <p className="note">
+                    The actual code wasn't that hard, but it honestly never
+                    occurred to me that I could just loop through the array of
+                    functions and resolve them in parallel. One of those little
+                    details that seems so obvious after you see it.
+                  </p>
+                  <div className="code-block">
+                    <pre>{`var promiseAll = function (functions) {
+  const results = []
+  let completed = 0
+
+  const newPromise = new Promise((resolve, reject) => {
+    functions
+      .forEach((fn, index) => fn())
+      .then((result) => {
+        results[(index = result)]
+        completed++
+        if (completed === functions.length) {
+          resolve(results)
+        }
+      })
+      .catch(reject)
+  })
+
+  return newPromise
+}`}</pre>
+                  </div>
+                </div>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Today's Development Work:</h2>
+                  <div className="topic-section">
+                    <h3 className="learning-title">1. Profile Button Fix</h3>
+                    <p className="note">
+                      Fixed the button in the users profile meant to update the
+                      details such as email or name, so it actually connects to
+                      the backend (before, it was just… decoration).
+                    </p>
+                  </div>
+                  <div className="topic-section">
+                    <h3 className="learning-title">2. Component Extraction</h3>
+                    <p className="note">
+                      Extracted a ShowPassword component because I was repeating
+                      the same code three times.
+                    </p>
+                  </div>
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      3. Color Palette Experiments
+                    </h3>
+                    <p className="note">
+                      Started experimenting with color palettes in the header.
+                      The plan is to let users pick a theme and see real color
+                      blocks instead of labels like "pink & blue." Way more
+                      intuitive.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ),
+          },
+
+          {
+            date: "August 26th",
+            moodBefore: emojis.neutral,
+            moodAfter: emojis.celebrate,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: First Recursive Function & CSS Themes
+                </h5>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/problems/compact-object/submissions/1749230991/?envType=study-plan-v2&envId=30-days-of-javascript"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Compact Object</strong>
+                    </a>
+                  </p>
+                  <p className="note">
+                    Today was a milestone: I wrote my very first recursive
+                    function entirely on my own 🎉. Not only did I solve it, but
+                    I even got a runtime beats 75% result. For something that's
+                    always felt intimidating, this was a huge confidence boost!
+                  </p>
+                  <div className="code-block">
+                    <pre>{`var compactObject = function (obj) {
+    if (Array.isArray(obj)) {
+        let result = []
+
+        for (let i = 0; i < obj.length; i++) {
+            if (!obj[i]) {
+                continue
+            } else {
+                if (Array.isArray(obj[i]) || (typeof obj[i] === 'object' && obj[i] !== null)) {
+                    result.push(compactObject(obj[i]))
+                } else {
+                    result.push(obj[i])
+                }
+            }
+        }
+        return result
+    } else if (typeof obj === 'object' && obj !== null && !Array.isArray(obj)) {
+        let result = {}
+
+        for (const [key, value] of Object.entries(obj)) {
+            if (value && key !== 0) {
+                if (Array.isArray(value) || (typeof value === 'object' && value !== null)) {
+                    result[key] = compactObject(value)
+                } else {
+                    result[key] = value
+                }
+            }
+        }
+        return result
+    }
+}`}</pre>
+                  </div>
+                </div>
+
+                <div className="learning-section">
+                  <h3 className="learning-title">CSS Themes Discovery:</h3>
+                  <p className="note">
+                    I stumbled on a CSS-Tricks article about themes. Perfect
+                    timing, since I'm neck-deep in palette struggles. Spoiler:
+                    "easy" is very relative when CSS is involved 😅.
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+
+          {
+            date: "August 27th",
+            moodBefore: emojis.neutral,
+            moodAfter: emojis.frustrated,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Array Logic & Palette Wrestling
+                </h5>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Mood-lifting playlist:</div>
+                  <a
+                    href="https://music.youtube.com/watch?v=7qZet3JCZXI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/watch?v=7qZet3JCZXI
+                  </a>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1750425553/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Can Place Flowers</strong>
+                    </a>
+                  </p>
+                  <p className="note">
+                    LeetCode served me the Can Place Flowers problem, and I
+                    underestimated it. What looked like an easy placement puzzle
+                    turned into careful logic about neighbors and spacing. After
+                    a few false starts, I finally got there:
+                  </p>
+                  <div className="code-block">
+                    <pre>{`var canPlaceFlowers = function (flowerbed, n) {
+    let flowers = 0
+
+    for (let i = 0; i < flowerbed.length; i++) {
+        if (flowerbed[i] === 0) {
+            if ((flowerbed[i - 1] || 0) === 0 && (flowerbed[i + 1] || 0) === 0) {
+                flowerbed[i] = 1
+                flowers++
+            }
+        }
+        if (flowers >= n) {
+            return true
+        }
+    }
+    return flowers >= n
+}`}</pre>
+                  </div>
+                </div>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Today's CSS Battle:</h2>
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      Palette Mapping Exhaustion
+                    </h3>
+                    <div className="struggle-level">Struggle: 8/10</div>
+                    <p className="note">
+                      Meanwhile, I kept wrestling with palettes. I've been
+                      mapping elements (navbar = accent, titles =
+                      text-secondary, hover = accent, etc.) and it's exhausting.
+                      Hours wasted, but one takeaway is clear: always decide
+                      your palette upfront before diving into code.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ),
+          },
+
+          {
+            date: "August 28th",
+            moodBefore: emojis.frustrated,
+            moodAfter: emojis.exhausted,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Palette & CSS Chaos
+                </h5>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Today's Reality Check:</h2>
+                  <div className="topic-section">
+                    <h3 className="learning-title">CSS: 1, Me: 0</h3>
+                    <div className="struggle-level">Struggle: 9/10</div>
+                    <p className="note">
+                      All I can say is: today was just more palette + CSS chaos.
+                      Nothing glamorous, just me versus the stylesheet. CSS: 1,
+                      Me: 0.
+                    </p>
+                    <p className="note">
+                      I keep second-guessing my light/pink palette, I can't land
+                      on a dark palette that actually feels right, and every
+                      time I think I'm done, I spot another tiny thing affected
+                      by the palette — like the input fields. It's endless. T_T
+                    </p>
+                  </div>
+                </div>
+
+                <div className="learning-section">
+                  <h3 className="learning-title">Silver Lining:</h3>
+                  <p className="note">That being said… I'm learning SO MUCH.</p>
+                </div>
+              </div>
+            ),
+          },
+
+          {
+            date: "August 29th",
+            moodBefore: emojis.tired,
+            moodAfter: emojis.celebrate,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Array Manipulation & Palette Victory
+                </h5>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1752608209/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Move Zeroes</strong>
+                    </a>
+                  </p>
+                  <div className="code-block">
+                    <pre>{`var moveZeroes = function (nums) {
+    let zeros = 0
+    for (let i = nums.length - 1; i >= 0; i--) {
+        if (nums[i] === 0) {
+            zeros++
+            nums.splice(i, 1)
+        }
+    }
+    while (zeros > 0) {
+        nums.push(0)
+        zeros--
+    }
+    return nums
+}`}</pre>
+                  </div>
+                </div>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Three Palettes Victory! 🎉</h2>
+                  <div className="topic-section">
+                    <h3 className="learning-title">Theme System Complete</h3>
+                    <div className="struggle-level">Relief Level: 10/10</div>
+                    <p className="note">
+                      But the real win wasn't the algorithm — it was finally
+                      wrapping up my three palettes. It took way too long,
+                      mostly because I didn't plan properly, but at last: light,
+                      green, and dark modes are working smoothly. Relief 🎉
+                    </p>
+                    <p className="note">
+                      I'm actually really happy about this whole theme-color
+                      journey—it's been frustrating at times, but I've picked up
+                      a ton of fundamentals along the way. For example, I
+                      finally learned how to style inputs so the browser doesn't
+                      sneak in its own defaults. (Pro tip: number input widgets
+                      are not your friends… they will fight you every step of
+                      the way 😅).
+                    </p>
+                  </div>
+                </div>
+
+                <div className="learning-section">
+                  <h3 className="learning-title">CSS Variables Deep Dive:</h3>
+                  <p className="note">
+                    <em>
+                      Working with CSS variables has also taught me that dark
+                      and light mode aren't just about swapping a few colors—you
+                      need real planning and cohesion across palettes. Every
+                      variable you introduce is a commitment, and if one palette
+                      doesn't line up with the others, you'll feel it
+                      everywhere: from text contrast to button hovers to the
+                      tiniest input borders.
+                    </em>
+                  </p>
+                  <p className="note">
+                    It's been a messy process, but it's also opened my eyes to
+                    how much intentional design work goes into something that,
+                    on the surface, looks as simple as "just switch to dark
+                    mode." Spoiler: it's never that simple.
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "August 31st",
+            moodBefore: emojis.relaxed,
+            moodAfter: emojis.smileWide,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Well-Deserved Break & Creative
+                  Tinkering
+                </h5>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1754745423/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Is Subsequence</strong>
+                    </a>
+                  </p>
+                  <p className="note">
+                    Closed out the month with Is Subsequence. Even though it was
+                    tagged "easy," the acceptance rate was only 48%, so it felt
+                    validating to solve it in ~10 minutes.
+                  </p>
+                  <div className="code-block">
+                    <pre>{`var isSubsequence = function (s, t) {
+    let sIndex = 0
+    for (let i = 0; i < t.length; i++) {
+        if (t[i] === s[sIndex]) {
+            sIndex++
+        }
+    }
+    return sIndex === s.length
+}`}</pre>
+                  </div>
+                </div>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Sunday Tinkering:</h2>
+                  <div className="topic-section">
+                    <h3 className="learning-title">1. Hacky CSS Fixes</h3>
+                    <p className="note">
+                      I added hacky responsive CSS rules to my portfolio just to
+                      squash layout issues:
+                    </p>
+                    <div className="code-block">
+                      <pre>{`@media (min-width: 992px) and (max-width: 1036px) {
+  .find-me-grid {
+    display: block !important;
+  }
+}`}</pre>
+                    </div>
+                    <p className="note">
+                      It's dumb, I know. But Sundays are for messing with
+                      whatever makes me happy — even if that means writing
+                      "stupid rules" just to soothe my OCD about design.
+                    </p>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      2. Landing Page Design Sketches
+                    </h3>
+                    <p className="note">
+                      Started sketching the landing page design today using
+                      Procreate. I ended up with some cute pink-and-blue
+                      concepts that kind of fit the vibe I want. But wow—this is
+                      hard. I am by no means a graphic designer, and it shows.
+                      😅 Still, it's fun to step outside of code and play around
+                      with visuals, even if half my "designs" look like they
+                      belong in a kid's sticker book. Baby steps!
+                    </p>
+                  </div>
+                </div>
+
+                <div className="learning-section">
+                  <h3 className="learning-title">Personal Note:</h3>
+                  <p className="note">
+                    <em>
+                      No blog update today, it's been a couple of tough weeks,
+                      this included. Programming always makes it better, makes
+                      everything feel lighter, so even though I haven't had the
+                      strength to write long blog post, I have been programming
+                      a lot as usual 😊
+                    </em>
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+        ],
+      },
+      {
+        month: "September",
+        items: [
+          {
+            date: "September 1st",
+            moodBefore: emojis.neutral,
+            moodAfter: emojis.productive,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Peekly - Landing Page Implementation
+                </h5>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Fresh Start:</h2>
+                  <div className="topic-section">
+                    <h3 className="learning-title">
+                      1. Landing Design Implementation
+                    </h3>
+                    <p className="note">
+                      Started implementing the various landing designs I created
+                      throughout the weekend and starting the Landing page CSS.
+                    </p>
+                  </div>
+                  <div className="topic-section">
+                    <h3 className="learning-title">2. Basic CSS Updates</h3>
+                    <p className="note">
+                      Basic CSS updates across the application.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ),
+          },
+
+          {
+            date: "September 2nd",
+            moodBefore: emojis.productive,
+            moodAfter: emojis.confused,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Card Sorting & README Updates
+                </h5>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">Progress & Problems:</h2>
+                  <div className="topic-section">
+                    <h3 className="learning-title">1. Card Sorting Fix</h3>
+                    <div className="struggle-level">Success: 9/10</div>
+                    <p className="note">
+                      Cards in the library now show from newest to oldest.
+                    </p>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">2. README with GIFs</h3>
+                    <div className="struggle-level">Success: 8/10</div>
+                    <p className="note">
+                      Finally took the time to add a decent README with GIFs
+                      using Peekly! I still want to make some more updates
+                      before hosting it in AWS, but the time is getting closer!
+                    </p>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">3. Pagination Breakdown</h3>
+                    <div className="struggle-level">Problem: 7/10</div>
+                    <p className="note">
+                      After a small update in the Cards component, the
+                      pagination is not working anymore.
+                    </p>
+                    <p className="note">
+                      Previously, the cards were displayed in the order they
+                      were created instead of in chronological order based on
+                      the card's month. This shouldn't be an issue as of today,
+                      since the app only allows the creation of one card per
+                      month, but eventually users will be able to create
+                      multiple cards each month.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="learning-section">
+                  <h3 className="learning-title">
+                    Pagination Strategy Options:
+                  </h3>
+                  <p className="note">
+                    The approach needs further investigation as there are
+                    several options:
+                    <br />
+                    1. One page = all cards of the same year
+                    <br />
+                    2. Reverse the code and make it so it displays the latest
+                    card created, as it will be the current's month card if
+                    users can't create more cards
+                    <br />
+                    3. Create new pagination sections, so there is one section
+                    that handles the automatically created cards, and the other
+                    section handles custom cards. Both sections would display
+                    cards ordered by last creation.
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+
+          {
+            date: "September 3rd",
+            moodBefore: emojis.focused,
+            moodAfter: emojis.exhausted,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: String Manipulation & Major Refactor
+                </h5>
+
+                <div className="playlist-section">
+                  <div className="playlist-label">Mood-lifting playlist:</div>
+                  <a
+                    href="https://music.youtube.com/watch?v=AVN7SJkNOR0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="playlist-link"
+                  >
+                    https://music.youtube.com/watch?v=AVN7SJkNOR0
+                  </a>
+                </div>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1758526689/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Reverse Vowels in a String</strong>
+                    </a>
+                  </p>
+                  <p className="note">
+                    So tricky omg! Let's just say it felt like one of those
+                    "looks simple on paper, fights you in practice" kind of
+                    problems. Easy? Debatable. A learning experience?
+                    Definitely. 😅
+                  </p>
+                  <div className="code-block">
+                    <pre>{`var reverseVowels = function (s) {
+  const word = s.split("")
+  let left = 0
+  let right = word.length - 1
+
+  const vowels = "aeiouAEIOU"
+  let rightVowel
+  let leftVowel
+
+  while (left < right) {
+    let rightVal = vowels.includes(word[right])
+    let leftVal = vowels.includes(word[left])
+    if (!leftVal) {
+      left++
+    }
+    if (!rightVal) {
+      right--
+    }
+
+    if (rightVal && leftVal) {
+      let temp = word[left]
+      word[left] = word[right]
+      word[right] = temp
+      left++
+      right--
+    }
+  }
+  return(word.join(""))
+}`}</pre>
+                  </div>
+                </div>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">The Great Revert:</h2>
+                  <div className="topic-section">
+                    <h3 className="learning-title">Learning Through Undoing</h3>
+                    <div className="struggle-level">Frustration: 8/10</div>
+                    <p className="note">
+                      Omg, what a ride. All the work I did yesterday? Reverted.
+                      Poof. Gone. It's fine—I did learn some stuff in the
+                      process, but it's a bit silly to realize that my "better
+                      approach" basically meant undoing everything I was proud
+                      of yesterday.
+                    </p>
+                    <p className="note">
+                      I decided on a new approach for the card library: it will
+                      still show 4 cards per page (nothing changes there), but
+                      now the data fetch only pulls cards from the selected
+                      year.
+                    </p>
+                    <p className="note">
+                      Users can pick the year through a dropdown menu in the top
+                      navigation bar, making it super easy to jump straight to
+                      their monthly card without digging around. Feels much
+                      cleaner and faster from a UX perspective, and it keeps the
+                      library organized without overwhelming the user.
+                    </p>
+                    <p className="note">Small tweak, big difference. 😌</p>
+                  </div>
+                </div>
+
+                <div className="learning-section">
+                  <h3 className="learning-title">Today's CSS Reality Check:</h3>
+                  <p className="note">
+                    <em>
+                      Today's lesson: if you want hover effects on
+                      &lt;option&gt; elements, forget it—the browser won't
+                      cooperate. The only reliable solution is to replace the
+                      native &lt;select&gt; with a custom dropdown.
+                    </em>
+                  </p>
+                  <p className="note">
+                    Well… there's that. XD I love customizing my app, but the
+                    thought of building every dropdown from scratch just to make
+                    it look nice is a bit daunting. The default selects are so
+                    ugly, though, I guess it's worth it. 😅
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+
+          {
+            date: "September 4th",
+            moodBefore: emojis.confused,
+            moodAfter: emojis.relieved,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">
+                  Scope of this session: Bug Hunt & Route Fixes
+                </h5>
+
+                <div className="struggle-section">
+                  <h2 className="feature-title">
+                    The Infinite Card Creation Bug:
+                  </h2>
+                  <div className="topic-section">
+                    <h3 className="learning-title">Detective Work</h3>
+                    <div className="struggle-level">Problem Solving: 8/10</div>
+                    <p className="note">
+                      Today I managed to completely break my /home route… every
+                      time I visited it, a new card was created. 😅
+                    </p>
+                    <p className="note">
+                      After some detective work, I realized the culprit:
+                    </p>
+                    <ul className="note">
+                      <li>
+                        The code is supposed to auto-create a card upon first
+                        login and first visit to /home.
+                      </li>
+                      <li>
+                        My recent changes created the card but didn't push it to
+                        the user, so the backend couldn't find the month's card
+                        in the user array. Result: it kept creating a new one
+                        every visit.
+                      </li>
+                      <li>
+                        Classic rookie mistake: I had forgotten user.save().
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="topic-section">
+                    <h3 className="learning-title">The Fix</h3>
+                    <div className="struggle-level">Success: 9/10</div>
+                    <p className="note">Fixes:</p>
+                    <ul className="note">
+                      <li>
+                        Added the missing user.save() so the new card actually
+                        persists.
+                      </li>
+                      <li>
+                        Added a safety check in the new card utils: if the first
+                        "check if this card exists" fails, another check runs
+                        just to be sure.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="learning-section">
+                  <h3 className="learning-title">Lesson Learned:</h3>
+                  <p className="note">
+                    <em>
+                      Small oversights can create hilarious chaos in production.
+                      😅
+                    </em>
+                  </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "September 6th & 7th",
+            moodBefore: emojis.focused,
+            moodAfter: emojis.smileWide,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">Weekend Reading</h5>
+
+                <div className="leetcode-section">
+                  <h3 className="learning-title">
+                    LeetCode Challenge of the Day:
+                  </h3>
+                  <p className="note">
+                    <a
+                      href="https://leetcode.com/submissions/detail/1762555866/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="playlist-link"
+                    >
+                      <strong>Find Pivot Index</strong>
+                    </a>
+                  </p>
+                  <div className="struggle-level">
+                    Struggle: 7/10 - 
+                  </div>
+                  <div className="note">Still wrestling a bit with pivots, but
+                    every time I sit down to work on them, the picture becomes a
+                    little clearer. Slowly but surely, it’s starting to click!
+                    Feels good to see progress, even if it’s just small steps.
+                    💪</div>
+                    <br></br>
+                  <div className="code-block">
+                    <pre>{`var pivotIndex = function (nums) {
+    let leftSum = 0;
+    let rightSum = nums.reduce((sum, num) => sum + num, 0);
+
+    for (let i = 0; i < nums.length; i++) {
+        rightSum -= nums[i];
+
+        if (leftSum === rightSum) {
+            return i;
+        }
+
+        leftSum += nums[i];
+    }
+
+    return -1;
+};`}</pre>
+                  </div>
+                </div>
+
+                <div className="learning-section">
+                  <h3 className="learning-title">Weekend Learning:</h3>
+                  <p className="note">
+                    <em>
+                      I have spent the weekend reading this interesting book:
+                      You Don't Know JS Yet!
+                      I'm learning so much! 😄
+                    </em>
+                  </p>
+                </div>
+              </div>
+            ),
+          },
         ],
       },
     ],
