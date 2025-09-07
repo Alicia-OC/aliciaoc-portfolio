@@ -135,7 +135,6 @@
 }
 
 .dropdown-btn {
-
   border-radius: .5em;
   padding: .5em .9em .5em .9em;
   text-decoration: none;
@@ -147,7 +146,6 @@
   text-align: left;
   margin-bottom: 5px;
   font-weight: 500;
-
 }
 
 .dropdown-btn.small {

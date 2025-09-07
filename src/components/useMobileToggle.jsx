@@ -3,13 +3,15 @@ import { useEffect, useRef } from "react";
 // Custom hook to auto-toggle sidebar on mobile devices
 function useMobileToggle(toggleSidebar, isSidebarClosed) {
   const lastManualToggle = useRef(Date.now());
+  const hasInitialized = useRef(false);
 
   useEffect(() => {
     function handleResize() {
       const isMobile = window.innerWidth < 768;
       const timeSinceLastManualToggle = Date.now() - lastManualToggle.current;
 
-      if (timeSinceLastManualToggle > 500) {
+      // Only auto-close on initial mount or actual resize events
+      if (timeSinceLastManualToggle > 500 && hasInitialized.current) {
         if (isMobile && !isSidebarClosed) {
           toggleSidebar();
         }
@@ -17,7 +19,10 @@ function useMobileToggle(toggleSidebar, isSidebarClosed) {
     }
 
     // Check on mount
-    handleResize();
+    if (!hasInitialized.current) {
+      hasInitialized.current = true;
+      handleResize();
+    }
 
     // Add resize listener with debounce
     let resizeTimeout;
@@ -33,7 +38,7 @@ function useMobileToggle(toggleSidebar, isSidebarClosed) {
       window.removeEventListener("resize", debouncedResize);
       clearTimeout(resizeTimeout);
     };
-  }, [toggleSidebar, isSidebarClosed]);
+  }, [toggleSidebar]);
 
   // Return a function to call when user manually toggles
   const handleManualToggle = () => {
