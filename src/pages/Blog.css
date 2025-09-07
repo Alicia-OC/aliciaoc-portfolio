@@ -144,8 +144,21 @@
   cursor: pointer;
   border: none;
   text-align: left;
-  margin-bottom: 5px;
+  margin: 10px 0 10px 0;
+
   font-weight: 500;
+  background-color: #C9E0D0;
+}
+
+.dropdown-btn span:first-of-type {
+  font-family: var(--font-favicon);
+}
+
+.dropdown-btn:hover {
+  background-color: var(--blue-color);
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+
 }
 
 .dropdown-btn.small {

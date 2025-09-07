@@ -21,6 +21,12 @@
   --font-clean: 'Inter', sans-serif;
   --font-handwritten: 'Caveat', cursive;
   --font-favicon: "Kalam", cursive;
+
+  --pastel-mint: #D4F0E0;
+  --pastel-lavender: #E0E8F7;
+  --pastel-rose: #F5E1E8;
+  --pastel-cream: #F9F7F4;
+  --pastel-pearl: #F2F4F6;
 }
 
 
@@ -142,7 +148,7 @@ section {
     max-width: 250px;
   }
 
-  .buttons-container button{
+  .buttons-container button {
     padding: 0.5rem 0.7rem 0.5rem 0.7rem !important;
   }
 
