@@ -144,7 +144,7 @@ const Blog = () => {
           </button>
           <div className="sidebar-content">
             {" "}
-            <div className="nav-head">
+            <div className=" nav-head">
               <a
                 href="https://alicia-oc.github.io/aliciaoc-portfolio/"
                 className="got-to-homepage"
