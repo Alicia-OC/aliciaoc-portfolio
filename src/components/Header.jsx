@@ -55,7 +55,7 @@ const Header = () => {
       </div>
       <p>
         Junior Full Stack self-taught looking for her opportunity to{" "}
-        <b>shine</b>!
+        <strong>shine</strong>!
       </p>
     </div>
   );
