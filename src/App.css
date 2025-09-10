@@ -152,6 +152,7 @@ section.main-page {
   .buttons-container {
     flex-basis: auto;
     justify-content: center;
+    gap: 5px;
   }
 
   .main {
@@ -193,7 +194,6 @@ section.main-page {
   .pyramid-btn:nth-child(4) {
     grid-column: 1 / -1;
     justify-self: center;
-    font-size: 12px;
   }
 
   .pyramid-btn:nth-child(5) {
@@ -217,7 +217,7 @@ section.main-page {
   }
 
   .contact-section h4 {
-    left: 60px;
+    left: 40px;
   }
 }
 
@@ -286,7 +286,7 @@ section.main-page {
   }
 
   .contact-section h4 {
-    left: 60px;
+
   }
 }
 
