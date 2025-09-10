@@ -1,5 +1,6 @@
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import pdfFile from "../img/AOC_EN-J.pdf";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -13,10 +14,22 @@ const Header = () => {
     });
   };
 
+
   return (
     <div className="main-title">
       <h1>Alicia Olivares Canales</h1>{" "}
       <div className="buttons-container">
+        <button
+          onClick={() => window.open(pdfFile, "_blank")}
+          style={{
+            backgroundColor: "#7ED6A3",
+            transition: "transform 0.3s ease-in-out",
+            color: "white",
+          }}
+          className="btn header-btn pyramid-btn"
+        >
+          Resume
+        </button>
         <button
           onClick={() => navigate("/blog", { replace: false })}
           style={{
@@ -26,7 +39,7 @@ const Header = () => {
           }}
           className="btn header-btn pyramid-btn"
         >
-          Check my blog
+          Blog diaries
         </button>
         <button
           disabled

@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "../App.css";
 
 import Header from "../components/Header";
 
@@ -26,7 +27,7 @@ const Home = () => {
   return (
     <>
       <div className="main">
-        <section id="about" className="about section">
+        <section id="about" className="main-page about section">
           <div
             className="container section-title"
             data-aos="fade-right"

@@ -17,31 +17,24 @@
   --blue-color: #6CA9E3;
   --blue-accent-color: #4379ac;
   --pink-color: #F78FB3;
-  --font-fancy: 'Oooh Baby', cursive;
-  --font-clean: 'Inter', sans-serif;
-  --font-handwritten: 'Caveat', cursive;
-  --font-favicon: "Kalam", cursive;
-
   --pastel-mint: #D4F0E0;
   --pastel-lavender: #E0E8F7;
   --pastel-rose: #F5E1E8;
   --pastel-cream: #F9F7F4;
   --pastel-pearl: #F2F4F6;
+
+  --font-fancy: 'Oooh Baby', cursive;
+  --font-clean: 'Inter', sans-serif;
+  --font-handwritten: 'Caveat', cursive;
+  --font-favicon: "Kalam", cursive;
+
+
 }
 
-
-.profile-image {
-  max-width: 350px;
-  justify-content: center;
+.contact-section row {
+  width: auto;
 }
 
-.main {
-  overflow: clip;
-  padding: 4rem;
-}
-
-
-/* added :root to force the font so it's bold, this font doesn't have bold version*/
 :root h1 {
   font-family: var(--font-fancy);
   font-weight: 600;
@@ -57,10 +50,23 @@
   margin-bottom: 0.5rem;
 }
 
-section {
+section.main-page {
   margin-bottom: 3rem;
 }
 
+.profile-image {
+  max-width: 350px;
+  justify-content: center;
+}
+
+.main {
+  overflow: clip;
+  padding: 4rem;
+}
+
+.intro p {
+  text-align: justify;
+}
 
 .main-title {
   display: flex;
@@ -96,7 +102,7 @@ section {
 .buttons-container button {
   max-width: 150px;
   width: auto;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
   font-size: 1rem;
   flex-shrink: 0;
   margin: 0;
@@ -123,7 +129,6 @@ section {
     max-width: 200px;
     margin: '0.5rem' auto;
     text-align: center;
-
   }
 
   .buttons-container {
@@ -134,10 +139,14 @@ section {
 
   .main {
     padding: 2rem;
+    text-align: justify;
+    text-justify: inter-word;
   }
+
 
   .section-title {
     padding-top: 1rem;
+    margin-bottom: 2rem !important;
   }
 
   .blog.btn {
@@ -165,9 +174,20 @@ section {
     grid-column: 1 / -1;
     justify-self: center;
   }
+
+  .profile-image {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
+.profile-image {
+  text-align: center;
 }
 
 @media (min-width: 400px) and (max-width: 550px) {
+
   .main-title {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -198,12 +218,7 @@ section {
 
 /* Medium devices (tablets, 600px to 899px) */
 @media (min-width: 600px) and (max-width: 899px) {
-  .main-title {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-  }
+
 
   .main-title button {
     position: static;
@@ -231,11 +246,6 @@ section {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1036px) {
-  .find-me-grid {
-    display: block !important;
-  }
-}
 
 /* Extra large devices (desktops, 1200px and up) */
 @media (min-width: 1215px) {
@@ -272,6 +282,24 @@ h4::before {
   z-index: -1;
 }
 
+.contact-info {
+  padding-top: 1rem;
+  line-height: 2rem;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #333;
+
+}
+
+.contact-info a:hover {
+  text-decoration: none;
+  color: var(--blue-color);
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
 .title-paragraph {
   font-family: var(--font-clean);
   font-size: 16px !important;
@@ -302,14 +330,11 @@ h4::before {
 
 .find-me-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-items: center;
 }
 
-.buttons-container button {
-  padding: 1rem;
-  border: none;
 
-}
 
 .buttons-container button:hover {
   color: white;
