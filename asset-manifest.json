@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/aliciaoc-portfolio/static/css/main.2af8c166.css",
+    "main.css": "/aliciaoc-portfolio/static/css/main.17b3b8f3.css",
     "main.js": "/aliciaoc-portfolio/static/js/main.b8cd4278.js",
     "static/js/453.16dd25e3.chunk.js": "/aliciaoc-portfolio/static/js/453.16dd25e3.chunk.js",
     "static/media/Avatar.png": "/aliciaoc-portfolio/static/media/Avatar.58b36e72a881c7fcf9e2.png",
@@ -9,12 +9,12 @@
     "static/media/AOC_EN-J.pdf": "/aliciaoc-portfolio/static/media/AOC_EN-J.01fb60933e04c76fb97d.pdf",
     "static/media/Brush 2.png": "/aliciaoc-portfolio/static/media/Brush 2.5b23627ae010bb5e16b4.png",
     "index.html": "/aliciaoc-portfolio/index.html",
-    "main.2af8c166.css.map": "/aliciaoc-portfolio/static/css/main.2af8c166.css.map",
+    "main.17b3b8f3.css.map": "/aliciaoc-portfolio/static/css/main.17b3b8f3.css.map",
     "main.b8cd4278.js.map": "/aliciaoc-portfolio/static/js/main.b8cd4278.js.map",
     "453.16dd25e3.chunk.js.map": "/aliciaoc-portfolio/static/js/453.16dd25e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2af8c166.css",
+    "static/css/main.17b3b8f3.css",
     "static/js/main.b8cd4278.js"
   ]
 }
