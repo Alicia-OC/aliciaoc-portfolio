@@ -26,7 +26,7 @@ const Header = () => {
             transition: "transform 0.3s ease-in-out",
             color: "white",
           }}
-          className="btn header-btn pyramid-btn"
+          className="btn header-btn links pyramid-btn"
         >
           Resume
         </button>
@@ -37,7 +37,7 @@ const Header = () => {
             transition: "transform 0.3s ease-in-out",
             color: "white",
           }}
-          className="btn header-btn pyramid-btn"
+          className="btn header-btn links pyramid-btn"
         >
           Blog diaries
         </button>
@@ -50,7 +50,7 @@ const Header = () => {
             color: "white",
           }}
           id="English-locale"
-          className=" btn header-btn pyramid-btn"
+          className="btn header-btn locale pyramid-btn"
         >
           EN
         </button>
@@ -61,7 +61,7 @@ const Header = () => {
             transition: "transform 0.3s ease-in-out",
             color: "white",
           }}
-          className="btn header-btn pyramid-btn"
+          className="btn header-btn locale pyramid-btn"
         >
           ES
         </button>

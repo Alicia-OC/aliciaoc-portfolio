@@ -108,19 +108,37 @@ section.main-page {
   margin: 0;
 }
 
+.profile-image {
+  text-align: center;
+}
+
+
 
 @media (max-width: 599px) {
   .main-title {
     gap: 0.3rem;
+    display: block;
     margin-bottom: 0.5rem;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    display: block !important;
   }
 
   .main-title h1 {
     flex-basis: auto;
     width: 100%;
     text-align: center;
+  }
+
+  .contact-section li {
+    text-align: center;
+  }
+
+  .main-title p {
+    flex-basis: auto;
+    width: 100%;
+    padding-top: 1rem !important;
   }
 
   .main-title button {
@@ -134,7 +152,6 @@ section.main-page {
   .buttons-container {
     flex-basis: auto;
     justify-content: center;
-    width: 100%;
   }
 
   .main {
@@ -142,7 +159,6 @@ section.main-page {
     text-align: justify;
     text-justify: inter-word;
   }
-
 
   .section-title {
     padding-top: 1rem;
@@ -158,7 +174,11 @@ section.main-page {
   }
 
   .buttons-container button {
-    padding: 0.5rem 0.7rem 0.5rem 0.7rem !important;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem
+  }
+
+  .buttons-container.locale button {
+    padding: 0.4rem 0.4rem 0.4rem 0.4rem !important;
   }
 
   .pyramid-btn:nth-child(2) {
@@ -173,20 +193,39 @@ section.main-page {
   .pyramid-btn:nth-child(4) {
     grid-column: 1 / -1;
     justify-self: center;
+    font-size: 12px;
   }
 
-  .profile-image {
+  .pyramid-btn:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-self: center;
+
+  }
+
+  .find-me-item a {
+    margin-left: 5px;
+  }
+
+  .contact-section {
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-section .contact-info {
+    padding: 0;
+  }
+
+  .contact-section h4 {
+    left: 60px;
   }
 }
 
-.profile-image {
-  text-align: center;
-}
 
-@media (min-width: 400px) and (max-width: 550px) {
+@media (min-width: 400px) and (max-width: 599px) {
+  .find-me-item a {
+    margin-left: 5px;
+  }
 
   .main-title {
     display: grid;
@@ -234,6 +273,20 @@ section.main-page {
   .who-am-i-section {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+  
+  .contact-section {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-section .contact-info {
+    padding: 0;
+  }
+
+  .contact-section h4 {
+    left: 60px;
   }
 }
 
@@ -292,6 +345,7 @@ h4::before {
   color: #333;
 
 }
+
 
 .contact-info a:hover {
   text-decoration: none;

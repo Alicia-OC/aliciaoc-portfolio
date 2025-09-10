@@ -59,7 +59,7 @@ const WhoAmI = () => {
               Check my LinkedIn
             </a>
           </div>
-          <div className="skill-item" data-aos="zoom-in" data-aos-delay="450">
+          <div className="find-me-item" data-aos="zoom-in" data-aos-delay="450">
             {" "}
             <a
               target="_blank"
