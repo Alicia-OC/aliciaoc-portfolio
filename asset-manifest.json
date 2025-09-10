@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/aliciaoc-portfolio/static/css/main.f9704980.css",
-    "main.js": "/aliciaoc-portfolio/static/js/main.d392de1b.js",
+    "main.css": "/aliciaoc-portfolio/static/css/main.1906b98e.css",
+    "main.js": "/aliciaoc-portfolio/static/js/main.05b2da86.js",
     "static/js/453.16dd25e3.chunk.js": "/aliciaoc-portfolio/static/js/453.16dd25e3.chunk.js",
     "static/media/Avatar.png": "/aliciaoc-portfolio/static/media/Avatar.58b36e72a881c7fcf9e2.png",
     "static/media/bootstrap-icons.woff?": "/aliciaoc-portfolio/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
     "static/media/bootstrap-icons.woff2?": "/aliciaoc-portfolio/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "static/media/AOC_EN-J.pdf": "/aliciaoc-portfolio/static/media/AOC_EN-J.01fb60933e04c76fb97d.pdf",
     "static/media/Brush 2.png": "/aliciaoc-portfolio/static/media/Brush 2.5b23627ae010bb5e16b4.png",
     "index.html": "/aliciaoc-portfolio/index.html",
-    "main.f9704980.css.map": "/aliciaoc-portfolio/static/css/main.f9704980.css.map",
-    "main.d392de1b.js.map": "/aliciaoc-portfolio/static/js/main.d392de1b.js.map",
+    "main.1906b98e.css.map": "/aliciaoc-portfolio/static/css/main.1906b98e.css.map",
+    "main.05b2da86.js.map": "/aliciaoc-portfolio/static/js/main.05b2da86.js.map",
     "453.16dd25e3.chunk.js.map": "/aliciaoc-portfolio/static/js/453.16dd25e3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9704980.css",
-    "static/js/main.d392de1b.js"
+    "static/css/main.1906b98e.css",
+    "static/js/main.05b2da86.js"
   ]
 }
