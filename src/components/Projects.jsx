@@ -54,14 +54,7 @@ const Projects = () => {
                 Translations Requests Generator,{" "}
                 <i className="subtitle-text">Personal project</i>
               </p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/Alicia-OC/Quest-Launcher-HQ"
-                className="my-links"
-              >
-                Check the repo in Github
-              </a>
+             
             </div>
 
             <p className="project-description">
@@ -83,14 +76,7 @@ const Projects = () => {
                 Client rates calculator,{" "}
                 <i className="subtitle-text">Work project</i>{" "}
               </p>{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/Alicia-OC/RatesCalc"
-                className="my-links"
-              >
-                Check the repo in Github
-              </a>
+         
             </div>
 
             <p className="project-description">
