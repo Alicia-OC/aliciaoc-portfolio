@@ -1,4 +1,4 @@
-import "./BlogContent.css";
+import "./LogBookContent.css";
 
 const BlogContent = (props) => {
   const hashtagMonth = props.hashtagMonth;
@@ -8,7 +8,6 @@ const BlogContent = (props) => {
 
   return (
     <>
-      {" "}
       <h1 id="blog-title">
         {hashtagMonth} Blog # {hashtag + 1}
       </h1>

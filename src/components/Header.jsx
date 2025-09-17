@@ -1,7 +1,6 @@
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Dropdown from "react-bootstrap/Dropdown";
 import pdfFile from "../img/AOC_EN-J.pdf";
 
 const Header = () => {
@@ -34,7 +33,7 @@ const Header = () => {
           Resume
         </button>
         <button
-          onClick={() => navigate("/blog", { replace: false })}
+          onClick={() => navigate("/logbook", { replace: false })}
           style={{
             backgroundColor: "#6CA9E3",
             transition: "transform 0.3s ease-in-out",
@@ -45,7 +44,7 @@ const Header = () => {
           Logbook
         </button>
         <button
-          onClick={() => navigate("/blog", { replace: false })}
+          onClick={() => navigate("/devblog", { replace: false })}
           style={{
             backgroundColor: "#F78FB3",
             transition: "transform 0.3s ease-in-out",

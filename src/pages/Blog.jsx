@@ -1,11 +1,11 @@
 import "./Blog.css";
 
-import BlogEntry from "../Blogs/BlogEntry";
+import BlogEntry from "../LogBook/LogBookEntry";
 import { useState } from "react";
 
 import Avatar from "../img/Avatar.png";
 import useMobileToggle from "../components/useMobileToggle";
-import BlogContent from "../Blogs/BlogsContainer";
+import BlogContent from "../LogBook/LogBookContainer";
 
 const Blog = () => {
   const latestBlog = BlogEntry[0].months.slice(-1)[0].items.slice(-1)[0];

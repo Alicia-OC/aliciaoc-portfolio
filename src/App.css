@@ -35,18 +35,23 @@
   width: auto;
 }
 
-:root h1 {
+body h1 {
   font-family: var(--font-fancy);
   font-weight: 600;
 }
 
-:root h2 {
+body h2 {
   font-family: var(--font-fancy);
   font-size: 35px;
   font-weight: 600;
 }
 
-:root p {
+body h3 {
+  font-family: var(--font-handwritten);
+  font-weight: 600;
+}
+
+body p {
   margin-bottom: 0.5rem;
 }
 
