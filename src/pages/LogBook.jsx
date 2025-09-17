@@ -1,6 +1,6 @@
-import "./Blog.css";
+import "./LogBook.css";
 
-import BlogEntry from "../LogBook/LogBookEntry";
+import LogBookEntry from "../LogBook/LogBookEntry";
 import { useState } from "react";
 
 import Avatar from "../img/Avatar.png";
@@ -8,9 +8,9 @@ import useMobileToggle from "../components/useMobileToggle";
 import BlogContent from "../LogBook/LogBookContainer";
 
 const Blog = () => {
-  const latestBlog = BlogEntry[0].months.slice(-1)[0].items.slice(-1)[0];
-  const latestMonth = BlogEntry[0].months.slice(-1)[0].month;
-  const itemsSize = BlogEntry[0].months.slice(-1)[0].items.length;
+  const latestBlog = LogBookEntry[0].months.slice(-1)[0].items.slice(-1)[0];
+  const latestMonth = LogBookEntry[0].months.slice(-1)[0].month;
+  const itemsSize = LogBookEntry[0].months.slice(-1)[0].items.length;
 
   const [blog, setBlog] = useState(latestBlog);
   const [isSidebarClosed, setIsSidebarClosed] = useState(false);
@@ -30,7 +30,7 @@ const Blog = () => {
   const handleManualToggle = useMobileToggle(toggleSidebar, isSidebarClosed);
 
   const getOpenNavItems = () => {
-    return BlogEntry.map((yearGroup) => (
+    return LogBookEntry.map((yearGroup) => (
       <div className="open-navbar" key={yearGroup.year}>
         <h4 className="navbar-group-year">{yearGroup.year}</h4>
         {yearGroup.months.map((monthGroup) => (
@@ -76,7 +76,7 @@ const Blog = () => {
   };
 
   const getClosedNavItems = () => {
-    return BlogEntry.map((yearGroup) => (
+    return LogBookEntry.map((yearGroup) => (
       <div key={yearGroup.year} className="navbar-small">
         <p className="navbar-group-year-small">
           '{yearGroup.year.toString().substr(2, 3)}
