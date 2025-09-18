@@ -1,9 +1,8 @@
-import "./LogBookContent.css";
+import "../styles/LogBookContent.css";
 
 const BlogContent = (props) => {
   const hashtagMonth = props.hashtagMonth;
   const hashtag = props.hashtag;
-
   const blog = props.blog;
 
   return (

@@ -397,6 +397,42 @@ section.main-page {
 
 }
 
+/*BLOG SECTION*/
+.nav-head {
+  text-align: center;
+  transition: 300ms ease-in-out;
+  flex-shrink: 0;
+  background: #f5f5f5;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-head-blogs-listed {
+  border-top: 2px solid #eee;
+}
+
+.nav-head a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-head a:hover {
+  color: rgb(46, 43, 43);
+}
+
+.blogs-listed {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: flex-start;
+  border-bottom: 2px solid #eee;
+  border-top: 2px solid #eee;
+  margin: 10px;
+  padding: 10px 0px;
+}
 
 .contact-info a:hover {
   text-decoration: none;

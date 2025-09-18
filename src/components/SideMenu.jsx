@@ -2,6 +2,7 @@ import { useState } from "react";
 import Avatar from "../img/Avatar.png";
 import useMobileToggle from "../components/useMobileToggle";
 import LogBookEntry from "../LogBook/LogBookEntry";
+import DevBlogEntry from "../DevBlog/DevBlogEntries";
 
 const SideMenu = (props) => {
   const isDevBlog = props.isDevBlog;
@@ -19,97 +20,137 @@ const SideMenu = (props) => {
 
   const handleManualToggle = useMobileToggle(toggleSidebar, isSidebarClosed);
 
-  function handleBlogClick(item, index, monthGroup) {
+  function handleBlogClick(item, index, monthGroup = "") {
     props.onBlogChange(item, index, monthGroup.month);
   }
 
   const getOpenNavItems = () => {
-    return LogBookEntry.map((yearGroup) => (
-      <div className="open-navbar" key={yearGroup.year}>
-        <h4 className="navbar-group-year">{yearGroup.year}</h4>
-        {yearGroup.months
-          .map((monthGroup) => (
-            <div key={monthGroup.month}>
-              <li>
-                <button
-                  onClick={() => toggleSubMenu(monthGroup.month)}
-                  className={`dropdown-btn  ${
-                    isOpen === monthGroup.month ? "rotate" : ""
-                  }`}
-                >
-                  <i className="bi bi-card-text"></i>
-                  <span>{monthGroup.month}</span>
-                  <i className="bi bi-caret-down"></i>
-                </button>
+    if (isDevBlog) {
+      return DevBlogEntry.map((item) => (
+        <div className="open-navbar" key={item.id}>
+          <ul className="sub-menu show">
+            <li>
+              <span
+                className="blog-li"
+                role="button"
+                tabIndex={0}
+                onClick={() => handleBlogClick(item, item.id)}
+              >
+                {item.title}
+              </span>
+            </li>
+          </ul>
+        </div>
+      ));
+    } else {
+      return LogBookEntry.map((yearGroup) => (
+        <div className="open-navbar" key={yearGroup.year}>
+          <h4 className="navbar-group-year">{yearGroup.year}</h4>
+          {yearGroup.months
+            .map((monthGroup) => (
+              <div key={monthGroup.month}>
+                <li>
+                  <button
+                    onClick={() => toggleSubMenu(monthGroup.month)}
+                    className={`dropdown-btn  ${
+                      isOpen === monthGroup.month ? "rotate" : ""
+                    }`}
+                  >
+                    <i className="bi bi-card-text"></i>
+                    <span>{monthGroup.month}</span>
+                    <i className="bi bi-caret-down"></i>
+                  </button>
 
-                {isOpen === monthGroup.month && (
-                  <ul className="sub-menu show">
-                    {monthGroup.items.map((item, index) => (
-                      <li key={item.key}>
-                        <span
-                          className="blog-li"
-                          role="button"
-                          tabIndex={0}
-                          onClick={() =>
-                            handleBlogClick(item, index, monthGroup)
-                          }
-                        >
-                          #{index + 1} {item.date}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            </div>
-          ))
-          .reverse()}
-      </div>
-    ));
+                  {isOpen === monthGroup.month && (
+                    <ul className="sub-menu show">
+                      {monthGroup.items.map((item, index) => (
+                        <li key={item.key}>
+                          <span
+                            className="blog-li"
+                            role="button"
+                            tabIndex={0}
+                            onClick={() =>
+                              handleBlogClick(item, index, monthGroup)
+                            }
+                          >
+                            #{index + 1} {item.date}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              </div>
+            ))
+            .reverse()}
+        </div>
+      ));
+    }
   };
 
   const getClosedNavItems = () => {
-    return LogBookEntry.map((yearGroup) => (
-      <div key={yearGroup.year} className="navbar-small">
-        <p className="navbar-group-year-small">
-          '{yearGroup.year.toString().substr(2, 3)}
-        </p>
-
-        {yearGroup.months
-          .map((monthGroup) => (
-            <div key={monthGroup.month}>
+    if (isDevBlog) {
+      return (
+        <div className="open-navbar">
+          <ul className="sub-menu-small show">
+            {DevBlogEntry.map((item) => (
               <li>
-                <button
-                  onClick={() => toggleSubMenu(monthGroup.month)}
-                  className={`dropdown-btn small`}
+                {" "}
+                <span
+                  className="blog-li"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => handleBlogClick(item, item.id)}
                 >
-                  <span>{monthGroup.month.substr(0, 3)}</span>
-                </button>
-
-                {isOpen === monthGroup.month && (
-                  <ul className="sub-menu-small show">
-                    {monthGroup.items.map((item, index) => (
-                      <li key={item.key}>
-                        <span
-                          className="blog-li"
-                          role="button"
-                          tabIndex={0}
-                          onClick={() =>
-                            handleBlogClick(item, index, monthGroup)
-                          }
-                        >
-                          #{index + 1}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                  {item.mini_title}
+                </span>
               </li>
-            </div>
-          ))
-          .reverse()}
-      </div>
-    ));
+            ))}
+          </ul>
+        </div>
+      );
+    } else {
+      return LogBookEntry.map((yearGroup) => (
+        <div key={yearGroup.year} className="navbar-small">
+          <p className="navbar-group-year-small">
+            '{yearGroup.year.toString().slice(-2)}
+          </p>
+          {yearGroup.months
+            .map((monthGroup) => (
+              <div key={monthGroup.month}>
+                <li>
+                  <button
+                    onClick={() => toggleSubMenu(monthGroup.month)}
+                    className={`dropdown-btn small`}
+                  >
+                    <span>{monthGroup.month.slice(0, 3)}</span>
+                  </button>
+
+                  {isOpen === monthGroup.month && (
+                    <ul className="sub-menu-small show">
+                      {monthGroup.items.map((item, index) => (
+                        <li key={item.key}>
+                          <span
+                            className="blog-li"
+                            role="button"
+                            tabIndex={0}
+                            onClick={() =>
+                              handleBlogClick(item, index, monthGroup)
+                            }
+                          >
+                            #{index + 1}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              </div>
+            ))
+            .reverse()}
+        </div>
+      ));
+    }
   };
 
   return (
@@ -183,14 +224,10 @@ const SideMenu = (props) => {
             </a>
           </div>
           <div className="blogs-listed">
-            {!isDevBlog ? (
-              isSidebarClosed ? (
-                getClosedNavItems()
-              ) : (
-                <ul>{getOpenNavItems()}</ul>
-              )
+            {isSidebarClosed ? (
+              getClosedNavItems()
             ) : (
-              ""
+              <ul>{getOpenNavItems()}</ul>
             )}
           </div>
         </div>

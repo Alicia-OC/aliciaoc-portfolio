@@ -1,9 +1,9 @@
-import "./LogBook.css";
+import "../styles/LogBook.css";
 
 import LogBookEntry from "../LogBook/LogBookEntry";
 import { useState } from "react";
 
-import BlogContent from "../LogBook/LogBookContainer";
+import LogBookContainer from "../LogBook/LogBookContainer";
 
 import SideMenu from "../components/SideMenu";
 
@@ -13,8 +13,6 @@ const Blog = () => {
   const itemsSize = LogBookEntry[0].months.slice(-1)[0].items.length;
 
   const [blog, setBlog] = useState(latestBlog);
- 
-
   const [hashtag, setHashtag] = useState(itemsSize - 1);
   const [hashtagMonth, setHashtagMonth] = useState(latestMonth);
 
@@ -36,7 +34,7 @@ const Blog = () => {
         role="main"
         aria-labelledby="blog-section"
       >
-        <BlogContent
+        <LogBookContainer
           hashtagMonth={hashtagMonth}
           hashtag={hashtag}
           blog={blog}
