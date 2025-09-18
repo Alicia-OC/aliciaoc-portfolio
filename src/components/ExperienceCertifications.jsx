@@ -1,7 +1,7 @@
 const ExperienceCertifications = () => {
   return (
     <div className="intro col-lg-7" data-aos="fade-left" data-aos-delay="300">
-      <div id="education">
+      <div id="experience">
         <h4>
          <i className="bi bi-briefcase"></i> Experience
         </h4>

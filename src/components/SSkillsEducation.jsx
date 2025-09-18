@@ -1,6 +1,6 @@
 const SSkillsEducation = () => {
   return (
-    <div className="col-lg-5" data-aos="fade-right" data-aos-delay="200">
+    <div id="soft-skills" className="col-lg-5" data-aos="fade-right" data-aos-delay="200">
       <div id="soft-skills">
         {" "}
         <h4><i className="bi bi-person"></i> Soft Skills</h4>

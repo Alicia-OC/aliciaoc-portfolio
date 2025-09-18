@@ -1,7 +1,7 @@
 const Projects = () => {
   return (
     <div className="col-lg-7" data-aos="fade-left" data-aos-delay="300">
-      <div className="projects-content">
+      <div id="projects-content" className="projects-content">
         <div className="intro">
           <h4>
             <i className="bi bi-bookmark"></i> Projects

@@ -23,8 +23,11 @@ const WhoAmI = () => {
             <b>
               I’m a persistent and optimistic person, and I know that one day
               I’ll land my dream job. All of this effort will pay off!
-            </b> <br/><br/>
-           Current passion level for programming: I used to eat ice cream when I was sad… now I just code.
+            </b>{" "}
+            <br />
+            <br />
+            Current passion level for programming: I used to eat ice cream when
+            I was sad… now I just code.
           </p>
         </div>
 

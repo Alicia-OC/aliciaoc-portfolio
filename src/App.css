@@ -73,13 +73,29 @@ h4::before {
   top: 50%;
   left: -10%;
   width: 137%;
-  height: 5em;
+  height: 4.5em;
   background-image: url('./img/Brush 2.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   transform: translateY(-50%);
   z-index: -1;
+}
+
+.resume-p1 h4::before {
+  height: 4em;
+}
+
+.resume h4 {
+  margin-bottom: 1.5rem;
+}
+
+#certificates h4 {
+  margin-top: 1.5rem;
+}
+
+#education h4 {
+  margin-top: 1.5rem;
 }
 
 section.main-page {
@@ -143,8 +159,6 @@ section.main-page {
 .profile-image {
   text-align: center;
 }
-
-
 
 @media (max-width: 599px) {
   .main-title {
@@ -265,6 +279,20 @@ section.main-page {
 
 }
 
+/*page changes from two to one column*/
+@media (max-width: 990px) {
+  #experience h4 {
+    margin-top: 1.5rem;
+  }
+
+  #projects-content h4 {
+    margin-top: 1.5rem;
+  }
+
+  .intro h2 {
+    margin-top: 5px;
+  }
+}
 
 @media (min-width: 400px) and (max-width: 599px) {
   .find-me-item a {
@@ -391,9 +419,7 @@ section.main-page {
   margin-bottom: 1.5rem;
 }
 
-.main-page.resume-p2 div {
-  margin-bottom: 1.5rem;
-}
+.main-page.resume div {}
 
 .section-title h1::after {
   content: "";

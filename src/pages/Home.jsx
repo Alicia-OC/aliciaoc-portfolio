@@ -43,7 +43,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section id="resume-p1" className="main-page resume-p1">
+        <section id="resume-p1" className="main-page resume">
           <div
             className="container section-title"
             data-aos="zoom-in"
@@ -68,7 +68,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section id="resume-p1" className="main-page resume-p2">
+        <section id="resume-p1" className="main-page resume">
           {" "}
           <div
             className="container section-div"
