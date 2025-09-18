@@ -3,8 +3,6 @@ import "./LogBook.css";
 import LogBookEntry from "../LogBook/LogBookEntry";
 import { useState } from "react";
 
-import Avatar from "../img/Avatar.png";
-import useMobileToggle from "../components/useMobileToggle";
 import BlogContent from "../LogBook/LogBookContainer";
 
 import SideMenu from "../components/SideMenu";

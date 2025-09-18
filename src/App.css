@@ -55,6 +55,33 @@ body p {
   margin-bottom: 0.5rem;
 }
 
+.main h4 {
+  font-family: var(--font-fancy);
+  padding: 0.5rem 0;
+  font-size: 40px;
+  font-weight: 600;
+  font-size: 30px;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+
+h4::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  width: 137%;
+  height: 5em;
+  background-image: url('./img/Brush 2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
 section.main-page {
   margin-bottom: 3rem;
 }
@@ -166,6 +193,10 @@ section.main-page {
     text-justify: inter-word;
   }
 
+  .main h4 {
+    margin-bottom: 1.5rem;
+  }
+
   .section-title {
     padding-top: 1rem;
     margin-bottom: 2rem !important;
@@ -222,8 +253,16 @@ section.main-page {
   }
 
   .contact-section h4 {
-    left: 40px;
+    display: flex;
+    justify-content: center;
   }
+
+  .contact-section h4::before {
+    left: -10%;
+    width: 127%;
+  }
+
+
 }
 
 
@@ -263,7 +302,6 @@ section.main-page {
 /* Medium devices (tablets, 600px to 899px) */
 @media (min-width: 600px) and (max-width: 899px) {
 
-
   .main-title button {
     position: static;
     max-height: 105px;
@@ -279,7 +317,7 @@ section.main-page {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  
+
   .contact-section {
     display: flex !important;
     flex-direction: column;
@@ -290,9 +328,15 @@ section.main-page {
     padding: 0;
   }
 
-  .contact-section h4 {
-
+  .main h4 {
+    margin-bottom: 1.5rem;
   }
+
+  .contact-section h4 {
+    display: flex;
+    justify-content: center;
+  }
+
 }
 
 /* Large devices (small laptops, 900px to 1199px) */
@@ -313,32 +357,6 @@ section.main-page {
   }
 }
 
-.main h4 {
-  font-family: var(--font-fancy);
-  padding: 1.5rem 0;
-  font-size: 40px;
-  font-weight: 600;
-  font-size: 30px;
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-}
-
-
-h4::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 130%;
-  height: 5em;
-  background-image: url('./img/Brush 2.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: translateY(-50%);
-  z-index: -1;
-}
 
 .contact-info {
   padding-top: 1rem;

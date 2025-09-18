@@ -12,7 +12,7 @@ const ContactMe = () => {
       </div>
 
       <div id="">
-        <h4 className="mt-4 brush-title"> Contact Information</h4>
+        <h4 className="mt-4 brush-title"><span>Contact Information</span></h4>
         <ul className="contact-info list-unstyled">
           <li>
             <i className="bi bi-envelope"></i>{" "}
