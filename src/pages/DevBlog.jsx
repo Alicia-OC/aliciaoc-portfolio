@@ -1,10 +1,13 @@
 import SideMenu from "../components/SideMenu";
 
 const DevBlog = () => {
+
   return (
     <div className="main-blog-container">
       <div className="side-menu">
-        <SideMenu />
+        <SideMenu isDevBlog={true}
+        
+        />
       </div>
       <section
         className="main-blogs-section"
