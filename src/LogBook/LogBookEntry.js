@@ -3966,7 +3966,7 @@ res.status(200).json({ user: userWithoutPassword, token });`}
                 <div className="leetcode-section">
                   <div className="note">
                     The daily blogs are currently on hold while I work on a new
-                    project: <span> <a href="/#/devblog">a dev blog for beginners</a></span>—especially those coming
+                    project: <span> <a href="/aliciaoc-portfolio/#/devblog">a dev blog for beginners</a></span>—especially those coming
                     from a Linguistic background. From my own experience,
                     transitioning from linguistics to engineering comes with
                     unique challenges, and I want to create content that
