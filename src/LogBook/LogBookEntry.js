@@ -3915,15 +3915,14 @@ res.status(200).json({ user: userWithoutPassword, token });`}
                       <strong>Find Pivot Index</strong>
                     </a>
                   </p>
-                  <div className="struggle-level">
-                    Struggle: 7/10 - 
+                  <div className="struggle-level">Struggle: 7/10 -</div>
+                  <div className="note">
+                    Still wrestling a bit with pivots, but every time I sit down
+                    to work on them, the picture becomes a little clearer.
+                    Slowly but surely, it’s starting to click! Feels good to see
+                    progress, even if it’s just small steps. 💪
                   </div>
-                  <div className="note">Still wrestling a bit with pivots, but
-                    every time I sit down to work on them, the picture becomes a
-                    little clearer. Slowly but surely, it’s starting to click!
-                    Feels good to see progress, even if it’s just small steps.
-                    💪</div>
-                    <br></br>
+                  <br></br>
                   <div className="code-block">
                     <pre>{`var pivotIndex = function (nums) {
     let leftSum = 0;
@@ -3949,10 +3948,35 @@ res.status(200).json({ user: userWithoutPassword, token });`}
                   <p className="note">
                     <em>
                       I have spent the weekend reading this interesting book:
-                      You Don't Know JS Yet!
-                      I'm learning so much! 😄
+                      You Don't Know JS Yet! I'm learning so much! 😄
                     </em>
                   </p>
+                </div>
+              </div>
+            ),
+          },
+          {
+            date: "September",
+            moodBefore: emojis.focused,
+            moodAfter: emojis.smileWide,
+            body: (
+              <div className="blog-container">
+                <h5 className="blog-scope">Update</h5>
+
+                <div className="leetcode-section">
+                  <div className="note">
+                    The daily blogs are currently on hold while I work on a new
+                    project: <span> <a href="/#/devblog">a dev blog for beginners</a></span>—especially those coming
+                    from a Linguistic background. From my own experience,
+                    transitioning from linguistics to engineering comes with
+                    unique challenges, and I want to create content that
+                    addresses them directly. I'm diving into plenty of
+                    documentation, books, and blogs. For now, my study sessions
+                    are focused on reading, alongside my non-negotiable daily
+                    LeetCode problem and some coding here and there when the
+                    craving gets too unbearable {emojis.tongue}!
+                  </div>
+                  <br></br>
                 </div>
               </div>
             ),
