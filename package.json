@@ -16,6 +16,7 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.7.1",
     "react-scripts": "5.0.1",
+    "react-syntax-highlighter": "^15.6.6",
     "sweetalert2": "^11.22.2",
     "web-vitals": "^2.1.4"
   },

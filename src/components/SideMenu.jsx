@@ -23,25 +23,45 @@ const SideMenu = (props) => {
   function handleBlogClick(item, index, monthGroup = "") {
     props.onBlogChange(item, index, monthGroup.month);
   }
-
   const getOpenNavItems = () => {
     if (isDevBlog) {
-      return DevBlogEntry.map((item) => (
-        <div className="open-navbar" key={item.id}>
-          <ul className="sub-menu show">
-            <li>
-              <span
-                className="blog-li"
-                role="button"
-                tabIndex={0}
-                onClick={() => handleBlogClick(item, item.id)}
-              >
-                {item.title}
-              </span>
-            </li>
-          </ul>
-        </div>
-      ));
+      return DevBlogEntry.map((item) => {
+        return (
+          <div className="open-navbar" key={item.id}>
+            <button
+              onClick={() => {
+                toggleSubMenu(item.body);
+                handleBlogClick(item, item.id);
+              }}
+              className={`dropdown-btn  ${
+                isOpen === item.body ? "rotate" : ""
+              }`}
+            >
+              <i className="bi bi-card-text"></i>
+              <span>{item.title}</span>
+              <i className="bi bi-caret-down"></i>
+            </button>
+            {isOpen && (
+              <ul className="sub-menu show">
+                {item.subEntries.map((item, index) => {
+                  return (
+                    <li key={item.index}>
+                      <span
+                        className="blog-li"
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => handleBlogClick(item, index)}
+                      >
+                        {item.title}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </div>
+        );
+      });
     } else {
       return LogBookEntry.map((yearGroup) => (
         <div className="open-navbar" key={yearGroup.year}>
@@ -49,37 +69,35 @@ const SideMenu = (props) => {
           {yearGroup.months
             .map((monthGroup) => (
               <div key={monthGroup.month}>
-                <li>
-                  <button
-                    onClick={() => toggleSubMenu(monthGroup.month)}
-                    className={`dropdown-btn  ${
-                      isOpen === monthGroup.month ? "rotate" : ""
-                    }`}
-                  >
-                    <i className="bi bi-card-text"></i>
-                    <span>{monthGroup.month}</span>
-                    <i className="bi bi-caret-down"></i>
-                  </button>
+                <button
+                  onClick={() => toggleSubMenu(monthGroup.month)}
+                  className={`dropdown-btn  ${
+                    isOpen === monthGroup.month ? "rotate" : ""
+                  }`}
+                >
+                  <i className="bi bi-card-text"></i>
+                  <span>{monthGroup.month}</span>
+                  <i className="bi bi-caret-down"></i>
+                </button>
 
-                  {isOpen === monthGroup.month && (
-                    <ul className="sub-menu show">
-                      {monthGroup.items.map((item, index) => (
-                        <li key={item.key}>
-                          <span
-                            className="blog-li"
-                            role="button"
-                            tabIndex={0}
-                            onClick={() =>
-                              handleBlogClick(item, index, monthGroup)
-                            }
-                          >
-                            #{index + 1} {item.date}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
+                {isOpen === monthGroup.month && (
+                  <ul className="sub-menu show">
+                    {monthGroup.items.map((item, index) => (
+                      <li key={item.key}>
+                        <span
+                          className="blog-li"
+                          role="button"
+                          tabIndex={0}
+                          onClick={() =>
+                            handleBlogClick(item, index, monthGroup)
+                          }
+                        >
+                          #{index + 1} {item.date}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))
             .reverse()}

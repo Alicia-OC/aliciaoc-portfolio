@@ -110,7 +110,6 @@
 .sub-menu.show {
   grid-template-rows: 1fr;
 }
-
 .dropdown-btn i {
   transition: 200ms ease;
 }
@@ -334,4 +333,3 @@
   display: flex;
   width: 100%;
 }
-

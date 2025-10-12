@@ -1,3 +1,4 @@
+import factory from "./DesignPatterns/Factory";
 const template = [
   {
     id: "",
@@ -8,61 +9,16 @@ const template = [
     publishedAt: "",
     glossary: [],
     references: [],
+    subEntries: [],
+    empty: true,
   },
 ];
 
 const DevBlogEntry = [
-  
-  {
-    id: "1",
-    title: "Mother of glossaries",
-    mini_title: "A-Z",
-
-    body: (
-      <div>
-        <h3>Writing in progress...</h3>
-      </div>
-    ),
-    tags: [],
-    publishedAt: "",
-    glossary: [],
-    references: [],
-  },
-  {
-    id: "2",
-    title: "JS basics",
-    mini_title: "JS",
-
-    body: (
-      <div>
-        <h3>Writing in progress...</h3>
-      </div>
-    ),
-    tags: [],
-    publishedAt: "",
-    glossary: [],
-    references: [],
-  },
-  {
-    id: "3",
-    title: "OOP basics",
-    mini_title: "OOP",
-
-    body: (
-      <div>
-        <h3>Writing in progress...</h3>
-      </div>
-    ),
-    tags: [],
-    publishedAt: "",
-    glossary: [],
-    references: [],
-  },
   {
     id: "4",
-    title: "Design patterns basics",
+    title: "Design patterns",
     mini_title: "DP",
-
     body: (
       <div>
         <h3>Writing in progress...</h3>
@@ -200,6 +156,59 @@ const DevBlogEntry = [
     publishedAt: "",
     glossary: [],
     references: [],
+    subEntries: [{ title: "Factory", body: factory }],
+    empty: false,
+  },
+  {
+    id: "1",
+    title: "The Terminator",
+    mini_title: "A-Z",
+
+    body: (
+      <div>
+        <h3>Writing in progress...</h3>
+      </div>
+    ),
+    tags: [],
+    publishedAt: "",
+    glossary: [],
+    references: [],
+    subEntries: [],
+    empty: true,
+  },
+  {
+    id: "2",
+    title: "JS basics",
+    mini_title: "JS",
+
+    body: (
+      <div>
+        <h3>Writing in progress...</h3>
+      </div>
+    ),
+    tags: [],
+    publishedAt: "",
+    glossary: [],
+    references: [],
+    subEntries: [],
+    empty: true,
+  },
+  {
+    id: "3",
+    title: "OOP basics",
+    mini_title: "OOP",
+
+    body: (
+      <div>
+        <h3>Writing in progress...</h3>
+      </div>
+    ),
+    tags: [],
+    publishedAt: "",
+    glossary: [],
+    references: [],
+    subEntries: [],
+    empty: true,
   },
 ];
 

@@ -557,3 +557,8 @@ section.main-page {
   font-size: 20px;
   display: center;
 }
+
+
+.dropdown-btn {
+  max-width: 157px;
+}
