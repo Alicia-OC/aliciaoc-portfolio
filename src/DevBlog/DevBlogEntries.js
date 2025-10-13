@@ -1,4 +1,5 @@
 import factory from "./DesignPatterns/Factory";
+import { Builder } from "./DesignPatterns/Builder";
 const template = [
   {
     id: "",
@@ -156,7 +157,7 @@ const DevBlogEntry = [
     publishedAt: "",
     glossary: [],
     references: [],
-    subEntries: [{ title: "Factory", body: factory }],
+    subEntries: [{ title: "Factory", body: factory }, {title: 'Builder', body: Builder}],
     empty: false,
   },
   {
