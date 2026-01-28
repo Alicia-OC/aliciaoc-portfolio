@@ -68,8 +68,11 @@ const Header = () => {
         </button>
       </div>
       <p>
-        Junior Full Stack self-taught looking for her opportunity to{" "}
-        <strong>shine</strong>!
+        Software Developer,<br></br>{" "}
+        <p>
+          who turned "I can learn that" into a career. Now building cool stuff — 
+          and loving it!
+        </p>
       </p>
     </div>
   );

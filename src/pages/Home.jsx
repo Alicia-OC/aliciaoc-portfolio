@@ -51,10 +51,10 @@ const Home = () => {
           >
             <h1>Resume</h1>
             <p>
-              Self-taught full-stack junior developer with a passion for coding
-              and a strong drive to build a career in the IT industry. Curious
-              and highly motivated, I’m seeking an opportunity to take on
-              challenges and grow both professionally and personally.
+              Full-stack developer with hands-on experience in product
+              management. Skilled in delivering solutions that combine technical
+              expertise and strategic vision. Motivated to drive impact and
+              growth.
             </p>
           </div>
           <div

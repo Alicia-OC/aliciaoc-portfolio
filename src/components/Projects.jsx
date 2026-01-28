@@ -10,7 +10,7 @@ const Projects = () => {
             <div className="project-title">
               {" "}
               <p className="title-paragraph">
-                Monthly Expenses tracker,{" "}
+               Peekly,{" "}
                 <i className="subtitle-text">Personal project</i>
               </p>{" "}
               <a

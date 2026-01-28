@@ -362,7 +362,7 @@ const slayer3 = SlayerFactory.createSlayer("kanoto", "Inosuke", [
   { name: "Mountain Training", completed: true, date: "2024-01-15" },
   { name: "Drum House", completed: true, date: "2024-02-20" },
   { name: "Spider Forest", completed: false, date: null }
-]);`
+]);`;
 
 const factory = (
   <div>
@@ -383,7 +383,7 @@ const factory = (
         without modifying the rest of your code.
       </p>
     </div>
-    <div class="section">
+    <div class="section roles">
       <h3>The 4 Roles</h3>
       <p>Who creates</p>
       <ul>
@@ -408,7 +408,7 @@ const factory = (
         </li>
       </ul>
     </div>
-    <div class="section">
+    <div class="section use-cases">
       <h3>JavaScript Use Case - Concrete products have different behaviors</h3>
       <SyntaxHighlighter
         language="javascript"
@@ -420,8 +420,10 @@ const factory = (
       </SyntaxHighlighter>
     </div>
 
-        <div class="section">
-      <h3>JavaScript Use Case - Concrete products don't have different behaviors</h3>
+    <div class="section use-cases">
+      <h3>
+        JavaScript Use Case - Concrete products don't have different behaviors
+      </h3>
       <SyntaxHighlighter
         language="javascript"
         style={docco}
@@ -431,7 +433,7 @@ const factory = (
         {codeString_same_behavior}
       </SyntaxHighlighter>
     </div>
-    <div class="section">
+    <div class="section why-use-it">
       <h3>Why Use It?</h3>
       <p>Benefits:</p>
       <ol>
@@ -448,7 +450,7 @@ const factory = (
         </li>
       </ol>
     </div>
-    <div class="section">
+    <div class="section when-to-use-it">
       <h3>When to Use It?</h3>
       <ul>
         <li>
@@ -461,7 +463,7 @@ const factory = (
         </li>
       </ul>
     </div>
-    <div class="section">
+    <div class="section summary">
       <h3>Think of It As</h3>
       <p>
         <strong>Factory = Vending machine</strong>

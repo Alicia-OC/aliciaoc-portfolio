@@ -6,9 +6,9 @@ const TechnicalSkills = () => {
       </h4>
       <p className="title-paragraph">MongoDB, Express, React, Node JS, Redux Toolkit </p>
       <p>Built MERN stack applications</p>
-      <p className="title-paragraph">HTML, CSS and JavaScript </p>
+      <p className="title-paragraph">HTML, CSS3 and JavaScript </p>
       <p>
-        Developed several small projects for learning, academic purposes, and
+        Developed several projects for learning, academic purposes, and
         improving work efficiency
       </p>
       <p className="title-paragraph"> Vitest and React Testing Library </p>

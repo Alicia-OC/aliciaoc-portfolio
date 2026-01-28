@@ -4,30 +4,58 @@ const WhoAmI = () => {
       <div className="about-content">
         <div className="intro">
           <h2>Who am I?</h2>
+
           <p>
             Ever since I was a kid, I struggled with the idea of doing{" "}
-            <i>nothing</i>. I always needed something to keep my mind
-            busy—otherwise, boredom and anxiety would creep in. Decades later, I
-            was lucky enough to discover something that constantly challenges me
-            and keeps my brain engaged... programming!{" "}
+            <i>nothing</i>. I always needed something to keep my mind busy —
+            otherwise, boredom and anxiety would creep in. Decades later, I was
+            lucky enough to discover something that constantly challenges me and
+            keeps my brain engaged… <b>programming</b>.
           </p>
+
           <p>
-            By the time I discovered my true passion, I had already completed a
-            degree and a master’s, and I simply couldn’t afford to quit my PM
-            job to start a new career — you know, adulting and bills. But I was
-            — and still am — determined to chase my dream. So I started studying
-            on my own during the little free time I had: watching tutorials,
-            reading blogs, buying courses. And here I am, juggling a million
-            things, often exhausted, but genuinely happy — because I’m fighting
-            for the life I want.{" "}
+            My journey into tech didn’t follow a straight line. By the time I
+            discovered my passion for programming, I already had a degree and a
+            master’s — and a full-time Localisation PM job I couldn’t exactly
+            walk away from (hello, adult responsibilities). So I did what I do
+            best:
+            <b> I kept going</b>. I taught myself to code in my free time,
+            juggling tutorials, courses, side projects, and far too many late
+            nights.
+          </p>
+
+          <p>
+            Today, that persistence has paid off. I work in a hybrid role as a{" "}
+            <b>Software Developer, with Product Management responsibilities</b>,
+            building features while staying closely involved in how the product
+            is shaped and delivered. I write and maintain production code,
+            turning requirements into clean, maintainable implementations ,
+            while using my product background to anticipate edge cases,
+            understand trade-offs, and make thoughtful technical decisions. I
+            enjoy being close to the code while still keeping an eye on how each
+            feature fits into the bigger picture.
+          </p>
+
+          <p>
             <b>
-              I’m a persistent and optimistic person, and I know that one day
-              I’ll land my dream job. All of this effort will pay off!
+              I’m a naturally curious, optimistic, and stubbornly persistent
+              developer.
             </b>{" "}
-            <br />
-            <br />
-            Current passion level for programming: I used to eat ice cream when
-            I was sad… now I just code.
+            I like diving into complex problems, improving existing codebases,
+            and refining features until they feel solid and intuitive. Working
+            at the intersection of development and product has made me a more
+            intentional engineer — someone who doesn’t just ask{" "}
+            <i>“can we build this?”</i> but also{" "}
+            <i>“should we, and how should it work for users?”</i> I’m always
+            learning, always iterating, and exactly where I want to be: building
+            products, writing code, and growing as a developer.
+          </p>
+
+          <p>
+            <i>
+              Current passion level for programming: I used to eat ice cream
+              when I was sad… now I just code.
+            </i>
           </p>
         </div>
 
